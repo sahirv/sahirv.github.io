@@ -1,7 +1,7 @@
 window.onload = function(){
     $('header').fadeIn(500);
     $('.spinner').remove();
-    $.get("../templates/modals.html", function(data){
+    $.get("templates/modals.html", function(data){
         $('#main-bod').html($('#main-bod').html() + data);
     });
     $('#main-bod').html()
