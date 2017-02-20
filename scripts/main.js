@@ -19,6 +19,10 @@ window.onload = function(){
     }, 1000);
 };
 
+$('document').ready(function(){
+    $('.slider').unslider();
+});
+
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
     $('body').on('click', '.page-scroll a', function(event) {
