@@ -9,10 +9,14 @@
 body {
     overflow-x: hidden;
     background-color: #fdfdfd;
+    font-family: 'Roboto';
+    font-weight: 300;
+    color: #696969;
+
 }
 
 p {
-    font-size: 20px;
+    font-size: 17px;
 }
 
 p.small {
