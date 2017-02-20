@@ -45,6 +45,7 @@
     z-index: 2;
     cursor: pointer;
     font-size: 40px;
+    margin-top: -150px;
 }
 .unslider-arrow.next {
     left: auto;

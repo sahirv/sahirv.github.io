@@ -20,7 +20,9 @@ window.onload = function(){
 };
 
 $('document').ready(function(){
-    $('.slider').unslider();
+    $('.slider').unslider({
+      infinite: true
+    });
 });
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
