@@ -12,18 +12,15 @@ window.onload = function(){
                 setTimeout(function(){
                     var $anchor = $(this);
                     $('header').slideUp(300);
+                    $('.slider').unslider({
+                      infinite: true
+                    });
                     //event.preventDefault();
                 }, 100);
             }, 750);
         })
     }, 1000);
 };
-
-$('document').ready(function(){
-    $('.slider').unslider({
-      infinite: true
-    });
-});
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
