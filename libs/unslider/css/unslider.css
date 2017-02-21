@@ -46,8 +46,15 @@
     cursor: pointer;
     font-size: 40px;
     margin-top: -150px;
+    color: #374d77;
 }
 .unslider-arrow.next {
     left: auto;
     right: 20px
+}
+
+@media(max-width: 767px){
+  .unslider-arrow {
+      margin-top: 0px;
+  }
 }
