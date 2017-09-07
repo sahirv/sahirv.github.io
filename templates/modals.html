@@ -268,3 +268,36 @@
                 </div>
             </div>
         </div>
+        <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>Pool Assist</h2>
+                                <hr class="star-primary">
+                                <p>This is a service that suggests the next best pool shot given a picture of a table. The vision is to turn this
+                                    into a phone app that can be used anywhere. Here is the progress:</p>
+                                <br>
+                                <p>After an initial picture is sent to the service, it undergoes canny edge detection after the application of a 3x3
+                                    gaussian filter.</p>
+                                <img src="img/portfolio/PA/canny.png" class="img-responsive img-centered" alt="">
+                                <br>
+                                <p>Hough circle transform applied to the previous canny edge detection results.</p>
+                                <img src="img/portfolio/PA/after.png" class="img-responsive img-centered" alt="">
+                                <p>Then by applying a mask above the coordinates of the circles and imposing original image on top of the mask, the individual balls can be
+                                    extracted for classification.</p>
+                                <img src="img/portfolio/PA/ball3.png" class="img-responsive img-centered" alt="">
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
