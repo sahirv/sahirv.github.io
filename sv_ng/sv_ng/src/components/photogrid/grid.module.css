@@ -69,6 +69,12 @@
     z-index: 4;
     width: 25%;
     padding-right: 5px;
+    overflow: scroll;
+    height: 95%;
+}
+
+.imageDetails::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 
 p a {
