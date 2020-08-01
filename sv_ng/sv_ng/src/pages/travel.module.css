@@ -1,0 +1,17 @@
+.earthDescription {
+    background: #fdfdfd;
+    text-align: center;
+    padding: 30px;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hrStyle {
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    background-color: #04539c;
+    margin-bottom: 10px;
+}

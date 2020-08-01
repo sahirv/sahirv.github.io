@@ -1,0 +1,99 @@
+{
+    "astro_image_details": [
+        {
+            "image": "dumbbell.jpg",
+            "title": "Dumbbell Nebula",
+            "description": "The dumbbell nebula, M27, is a planetary nebula found in the constellation Vulpecula. 50x40s exposures were taken from my backyard on June 11, 2020, and stacked to produce this image.",
+            "equipment": [
+                 "Sky-Watcher EvoStar 100ED",
+                "Canon EOS Rebel SL2",
+                "Sky-Watcher HEQ5",
+                "Starfield 0.8X Reducer"
+            ],
+            "link": "https://www.nasa.gov/feature/goddard/2017/messier-27-the-dumbbell-nebula"
+        },
+        {
+            "image": "jupiter.png",
+            "title": "Jupiter",
+            "description": "The biggest planet in our solar system. Jupiter's clouds, as well as its 4 most prominent moons can clearly be seen! This picture is a composite that consists of a stack of ~4000 images taken with low iso and one image taken with high ISO. I'm sure more detail would be visible without the reducer and a barlow lens. Taken July 2, 2020.",
+            "equipment": [
+                 "Sky-Watcher EvoStar 100ED",
+                "Canon EOS Rebel SL2",
+                "Sky-Watcher HEQ5",
+                "Starfield 0.8X Reducer"
+            ],
+            "link": "https://en.wikipedia.org/wiki/Jupiter"
+        },
+        {
+            "image": "moon6-1-2020.png",
+            "title": "Moon from Ontario, Canada",
+            "description": "Our very own moon, taken on June 1, 2020. I took around 40 images and stacked them using Autostakkert.",
+            "equipment": [
+                 "Sky-Watcher EvoStar 100ED",
+                "Canon EOS Rebel SL2",
+                "Sky-Watcher HEQ5",
+                "Starfield 0.8X Reducer"
+            ],
+            "link": "https://en.wikipedia.org/wiki/Moon"
+        },
+        {
+            "image": "pinwheel.jpg",
+            "title": "Pinwheel Galaxy",
+            "description": "In Ursa Major lies M101, also known as the Pinwheel Galaxy. This is my first picture of a galaxy, made with about 2 hrs of integration time. You can also see hints of NGC 5474 in the top left and NGC 5422 in the bottom right. Taken June 12, 2020",
+            "equipment": [
+                 "Sky-Watcher EvoStar 100ED",
+                "Canon EOS Rebel SL2",
+                "Sky-Watcher HEQ5",
+                "Starfield 0.8X Reducer"
+            ],
+            "link": "https://www.nasa.gov/feature/goddard/2017/messier-101-the-pinwheel-galaxy"
+        },
+        {
+            "image": "hercules.jpg",
+            "title": "The Great Cluster in Hercules",
+            "description": "This is M13, a massive globular cluster in the constellation hercules. It is made up of thousands of stars gravitationally bound to one another, and provides a spectacular sight through small telescopes and binoculars. This picture is a stack of 100x15s exposures. Taken May 26, 2020.",
+            "equipment": [
+                 "Sky-Watcher EvoStar 100ED",
+                "Canon EOS Rebel SL2",
+                "Sky-Watcher HEQ5",
+                "Starfield 0.8X Reducer"
+            ],
+            "link": "https://www.nasa.gov/feature/goddard/2017/messier-13-the-hercules-cluster"
+        },
+        {
+            "image": "ring.png",
+            "title": "Ring Nebula",
+            "description": "M27 - the Ring Nebula. A small planetary nebula in the constellation Lyra. This is my first planetary nebula image, taken on June 8, 2020.",
+            "equipment": [
+                "Sky-Watcher EvoStar 100ED",
+                "Canon EOS Rebel SL2",
+                "Sky-Watcher HEQ5",
+                "Starfield 0.8X Reducer"
+            ],
+            "link": "https://www.nasa.gov/feature/goddard/2017/messier-57-the-ring-nebula"
+        },
+        {
+            "image": "whirlpool.jpg",
+            "title": "Whirlpool Galaxy",
+            "description": "M51 - Whirlpool Galaxy along with the smaller NGC 5195. This image is only made up of 45 minutes worth of exposure time, as clouds rolled in during the imaging session. However, the arms are bright enough to appear distinctly in the image, and with some editing can be seen easily in the image.",
+            "equipment": [
+                "Sky-Watcher EvoStar 100ED",
+                "Canon EOS Rebel SL2",
+                "Sky-Watcher HEQ5",
+                "Starfield 0.8X Reducer"
+            ],
+            "link": "https://www.nasa.gov/feature/goddard/2017/messier-51-the-whirlpool-galaxy"
+        },
+        {
+            "image": "NEOWISE.jpg",
+            "title": "Comet C/2020 F3 (NEOWISE)",
+            "description": "Comet Neowise was only discovered on March 27, 2020, but within a couple of months it became so bright that it was visible via the naked eye on Earth. For a couple of weeks, those with a keen eye could see the comet just before sunrise and just after sunset. This image was taken around 5 AM from Southern Ontario, when the comet is most visible. ",
+            "equipment": [
+                "Canon 18-55mm F/3.5-5.6",
+                "Canon EOS Rebel SL2",
+                "Standard Tripod"
+            ],
+            "link": "https://en.wikipedia.org/wiki/C/2020_F3_(NEOWISE)"
+        }
+    ]
+}

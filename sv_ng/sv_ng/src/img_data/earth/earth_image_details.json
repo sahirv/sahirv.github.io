@@ -1,0 +1,95 @@
+{
+    "earth_image_details": [
+        {
+            "description": "Anfield Stadium, Liverpool. I took an exchange term at the University of Sheffield in Fall 2017 so I'd have an excuse to conduct a pilgrimage to Liverpool FC's legendary stadium. This is one of the few pictures I took during my visit. LFC beat Huddersfield 3-0.",
+            "image": "anfield.jpg",
+            "continent": "europe",
+            "title": "Anfield Stadium",
+            "location": "Liverpool, UK"
+        },
+        {
+            "description": "Oracle Park, formerly known as AT&T Park (and a bunch of other things before that). On this particular day, the home team, San Francisco Giants were playing the Chicago Cubs. It's an absolutely stunning venue, with views of the San Francisco bay and Oakland. ",
+            "image": "att_giants.jpg",
+            "continent": "north america",
+            "title": "AT&T Park",
+            "location": "San Francisco, USA"
+        },
+        {
+            "description": "I took a day trip to Oxford University in the fall of 2017. It was quite amazing to see the historic architecture, trace the steps of some of humanity's finest thinkers and artists, and eat shepherd's pie at The Eagle and Child. Yes, the very same pub that the author of the Lord of the Rings, J. R. R. Tolkien, used as a weekly meeting place.",
+            "image": "oxford.jpg",
+            "continent": "europe",
+            "title": "Christ Church, Oxford University",
+            "location": "Oxford, UK"
+        },
+        {
+            "description": "Even in the middle of a heatwave, I could stay perched on top of Monte Solaro for hours and enjoy the views of Capri and Sorrento. Italy has so much to offer, and Capri is definitely a must for tourists. Even the journey to Monte Solaro is quite exhilerating, let alone the views that you're awarded with in the end. The Funicular cable car and buses that traverse the island offer an expereince unlike no other. Kudos to the drivers for being able to navigate tight roads and through tricky traffic!",
+            "image": "capri.jpg",
+            "continent": "europe",
+            "title": "Monte Solaro",
+            "location": "Capri, Italy"
+        },
+        {
+            "description": "A hot air balloon begins to take flight over Maasai Mara. Game drives normally happen around sunrise and sunset. It is at those times when temperatures are cool enough for animals to roam about the plains freely, while also being bright enough for us to see them. Safaris are almost therapeutic to me. It feels unreal to stand in the safari vehicle with the top open, with the fresh wind hitting my face as I look out for some of the world's most magnificent creatures. At that moment there is nothing but peace and happiness. I hope humans are able to experience and preserve the natural beauty of East Africa until the end of time.",
+            "image": "mara_balloon.jpg",
+            "continent": "africa",
+            "title": "Sunrise at Mara Serena",
+            "location": "Maasai Mara National Reserve, Kenya"
+        },
+        {
+            "description": "A herd of Antellopes (or perhaps Gazelles) congregate during sunset at Maasai Mara. As the day ends, I feel nothing but a sense of complete peace and freedom.",
+            "image": "masai_mara.jpg",
+            "continent": "africa",
+            "title": "Sunset at Mara Serena",
+            "location": "Maasai Mara National Reserve, Kenya"
+        },
+        {
+            "description": "One of my favourite places in the world is the Kenyan South Coast. I got up a bit early to take a morning stroll and enjoy the sun rising over the Indian Ocean. A few dhows can be seen near the horizon, resting peacefully until they take tourists over vibrant coral reefs later on in the day.",
+            "image": "msa_sc.jpg",
+            "continent": "africa",
+            "title": "Kenyan Coast",
+            "location": "Diani Beach, Kenya"
+        },
+        {
+            "description": "Despite the blistering heat, we decided to trek a part of the Path of Gods. It is safe to say that the name does not exaggerate. It was a short bus ride from our Airbnb in San Lazzaro, to the trailhead in Bomerano. From there, there was nothing but stunning views of the Amalfi coast. Equally stunning was the presence of water fountains carved into the side of the mountain, along with seemingly old houses and churches that passed the test of time.",
+            "image": "path_of_gods.jpg",
+            "continent": "europe",
+            "title": "Path of Gods",
+            "location": "Amalfi Coast, Italy"
+        },
+        {
+            "description": "Mt. Si, in all its glory, as seen from my first hike in the Pacific North-West. Without a doubt, one of the most beautiful places in the world.",
+            "image": "si.jpg",
+            "continent": "north america",
+            "title": "Mt. Si",
+            "location": "Snoqualmie Valley, USA"
+        },
+        {
+            "description": "Mount Vesuvius can faintly be seen towering above the ocean from Sorrento, Italy.",
+            "image": "sorrento.jpg",
+            "continent": "europe",
+            "title": "Sorrento",
+            "location": "Sorrento, Italy"
+        },
+        {
+            "description": "Burj Al Arab emerging behind the Souk Madinat, as a man navigates an \"Abra\" through the Souk's waterways. This picture depicts a great microcosm of Dubai as it is today. A newly defined city that boasts state of the art architecture and unimaginable luxury, while striving to maintain its Islamic and Arabian roots.",
+            "image": "souk_madinat.jpg",
+            "continent": "asia",
+            "title": "A Clash of Civilizations",
+            "location": "Dubai, UAE"
+        },
+        {
+            "description": "For a few minutes during dusk, the entire beach was orange. Mountains surrounding the lake can be seen in the distance, casting a silhouette against the sky. ",
+            "image": "tahoe.jpg",
+            "continent": "north america",
+            "title": "Sunset at Lake Tahoe",
+            "location": "Lake Tahoe, USA"
+        },
+        {
+            "description": "Yosemite National Park truly is the best that California has to offer. It is home to the iconic El Capitain and Half Dome, towering and ancient sequoia trees, and tens of waterfalls - including Yosemite falls, which drop a whopping 739m. It's almost like finding yourself on a foreign planet. The granite cliffs stand apparent in midst of giant sequioa groves and lush meadows. Finding yourself on top of one of them is a must, as you're treated to incredible vistas unlike any that the rest of the world has to offer.",
+            "image": "yosemite.jpg",
+            "continent": "north america",
+            "title": "Yosemite",
+            "location": "Yosemite National Park, USA"
+        }        
+    ]
+}

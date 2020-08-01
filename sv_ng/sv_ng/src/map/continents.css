@@ -1,0 +1,48 @@
+
+#asia {
+    fill:#04539c;
+}
+#asia:hover {
+    fill:#02203b;
+    cursor: pointer;
+}
+
+#australia {
+    fill:#04539c;
+}
+#australia:hover {
+    fill:#02203b;
+    cursor: pointer;
+}
+
+#africa {
+    fill:#04539c;
+}
+#africa:hover {
+    fill:#02203b;
+    cursor: pointer;
+}
+
+#europe {
+    fill:#04539c;
+}
+#europe:hover {
+    fill:#02203b;
+    cursor: pointer;
+}
+
+#south_america {
+    fill:#04539c;
+}
+#south_america:hover {
+    fill:#02203b;
+    cursor: pointer
+}
+
+#north_america {
+    fill:#04539c;
+}
+#north_america:hover {
+    fill:#02203b;
+    cursor: pointer
+}
