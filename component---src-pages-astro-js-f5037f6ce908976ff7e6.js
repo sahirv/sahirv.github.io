@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{"7sO9":function(e,a,t){"use strict";t.r(a);var s=t("q1tI"),i=t.n(s),n=t("Wbzz"),r=t("Bl7J"),o=t("vrFN"),l=t("sh+E");a.default=function(){var e=Object(n.useStaticQuery)("3726313981"),a=e.image_data.nodes[0].astro_image_details;return i.a.createElement(r.a,{pageTitle:"Astrophotography"},i.a.createElement(o.a,{title:"Astro"}),i.a.createElement(l.a,{thumbnails:e.thumbnails.edges,images:e.images.edges,imageDetails:a}))}}}]);
-//# sourceMappingURL=component---src-pages-astro-js-f5037f6ce908976ff7e6.js.map
