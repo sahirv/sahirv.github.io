@@ -618,16 +618,11 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
-  }
-}
 
 .footericon {
   display: inline-block;
   margin: 1.5rem;
-  font-size: 2vw;
+  font-size: 25px;
   text-decoration: none;
   transition: 0.1s ease-in-out;
 }
@@ -641,7 +636,7 @@ pre tt:after {
   color: rgb(255, 255, 255);
   text-decoration: none;
   font-weight: 400;
-  font-size: 1.5vw;
+  font-size: 24px;
   margin-left: 2rem;
 }
 
@@ -658,7 +653,35 @@ pre tt:after {
 
 .mainlinkbar {
   text-align: center;
-  margin-bottom: 22rem;
+  margin-bottom: 5rem;
   margin-right: 5rem;
   margin-left: 0rem;
+  margin-top: 15rem;
+}
+
+.draweropen {
+  transform: scaleY(1);
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 100%;
+  }
+  .maintitle {
+    font-size: 38px !important;
+    margin-bottom: 3rem !important;
+    margin-top: 5rem;
+  }
+  .mainlinkbar {
+    display: none !important;
+  }
+  .footericon {
+    font-size: 25px
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .maintitle {
+    font-weight: 400 !important;
+  }
 }

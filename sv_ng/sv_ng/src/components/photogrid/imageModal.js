@@ -14,6 +14,11 @@ const ImageModal = ({image, imageDetails, isModalOpen, onClose}) => {
     }
     return(
         <Modal isOpen={isModalOpen} shouldCloseOnOverlayClick={true} onRequestClose={onClose} className={styles.modal} overlayClassName={styles.overlay}>
+            <div className={styles.imageContainer}>
+                <a href={image.node.childImageSharp.fluid.src} target="_blank">
+                    <Img fluid={{...image.node.childImageSharp.fluid}} imgStyle={{objectFit: 'contain'}} className={styles.image}></Img>
+                </a>
+            </div>
             {detail ? 
                 <div className={styles.imageDetails}>
                     <h4>{detail.title}</h4>
@@ -25,11 +30,6 @@ const ImageModal = ({image, imageDetails, isModalOpen, onClose}) => {
                 </div> 
                 : <div className={styles.imageDetails}>No image details found</div>
             }
-                <div className={styles.imageContainer}>
-                <a href={image.node.childImageSharp.fluid.src} target="_blank">
-                    <Img fluid={{...image.node.childImageSharp.fluid}} imgStyle={{objectFit: 'contain'}} className={styles.image}></Img>
-                    </a>
-                </div>
         </Modal>);
 }
 

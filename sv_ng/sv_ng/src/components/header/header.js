@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import NavButton from "./nav-button"
+import styles from "./header.module.css"
 
 class Header extends React.Component {
   constructor(props) {
@@ -32,6 +33,7 @@ class Header extends React.Component {
         zIndex: 1,
         top: 0,
       }}
+      className={this.props.pageTitle === "Sahir Vellani" ? styles.dontshowheader : styles.showheader}
     >
       <div style={{
         padding: `0.2rem 1.0875rem`,

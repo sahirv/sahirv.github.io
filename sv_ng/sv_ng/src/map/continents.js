@@ -27,7 +27,8 @@ const Continents = props => {
    width="100%"
    viewBox="0 0 468 200"
    preserveAspectRatio="xMidYMid meet"
-   id="worldMap">
+   id="worldMap"
+   className={styles.mapSVG}>
   {/*Africa */}
   <g
      onClick={(e) => {e.stopPropagation(); props.onContinentClick("africa"); setClickedContinent("africa");}}

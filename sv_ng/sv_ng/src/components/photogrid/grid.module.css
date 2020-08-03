@@ -100,3 +100,69 @@ p a {
 .description {
     padding-bottom: 10px;
 }
+
+
+@media screen and (max-width: 600px) {
+    .modal {
+      position: absolute;
+      left: 30px;
+      right: 30px;
+      top: 60px;
+      bottom: 60px;
+      overflow: auto;
+    }
+
+    .imageDetails {
+        display: block;
+        position: relative;
+        width: 90%;
+        height: fit-content;
+        padding-bottom: 20px;
+    }
+
+    .imageContainer {
+        width: 100%;
+        margin-bottom: auto;
+        background-color: rgb(12, 12, 12);
+        display: block;
+        height: fit-content;
+    }
+
+    .image {
+        /* height: 100%; */
+        /* object-fit: cover; */
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: zoom-in;
+    }
+
+    .gridContainer {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-row-gap: 2px;
+        grid-column-gap: 2px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .gridItem {
+        padding: 0px;
+        transition: 0.15s ease-in-out;
+    }
+
+    .overlay {
+        background-color: rgb(149 148 148 / 62%)
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .modal {
+      position: absolute;
+      left: 15px;
+      right: 15px;
+      top: 90px;
+      bottom: 70px;
+      overflow: auto;
+    }
+}

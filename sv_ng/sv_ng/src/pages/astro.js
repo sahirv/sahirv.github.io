@@ -49,8 +49,8 @@ const SecondPage = () => {
   `);
   let imageDetails = data.image_data.nodes[0].astro_image_details;
   return (
-    <Layout pageTitle="Astrophotography">
-      <SEO title="Astro" />
+    <Layout pageTitle="Space">
+      <SEO title="Astrophotography" />
       <PhotoGrid thumbnails={data.thumbnails.edges} images={data.images.edges} imageDetails={imageDetails}></PhotoGrid>
     </Layout>
   );

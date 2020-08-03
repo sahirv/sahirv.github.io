@@ -79,7 +79,7 @@ const SecondPage = () => {
   return(
   <Layout pageTitle="Earth">
     <SEO title="Earth - Travel" />
-    <div className={styles.earthDescription}>What should we do with our time but to explore? I haven't seen much of the world, but the parts that I have seen offered plenty of beautiful scenes and moments. Here are some of those moments that I experienced, sorted by continent.</div>
+    <div className={styles.earthDescription}>What should we do with our time but to explore? I haven't seen much of the world, but the parts I have seen offered plenty of beautiful scenes and moments. Click on the continents to filter.</div>
     <Map continents={continents} onContinentClick={continentClickCallback}/>
     <hr className={styles.hrStyle}></hr>
     <PhotoGrid

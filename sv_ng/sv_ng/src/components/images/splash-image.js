@@ -18,7 +18,7 @@ import styles from "./home-background.module.css"
 
 // `
 
-const SplashImage = ({pageTitle}) => {
+const SplashImage = ({pageTitle, isMobile}) => {
   const data = useStaticQuery(graphql`
     {
       astroImage: file(relativePath: { eq: "moon6-1-2020.png" }) {
@@ -31,7 +31,22 @@ const SplashImage = ({pageTitle}) => {
 
       earthImage: file(relativePath: { eq: "venice.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 3000) {
+          fluid(maxWidth: 3000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      mobileEarthImage: file(relativePath: { eq: "rainier.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      mobileAstroImage: file(relativePath: { eq: "hercules-mobile.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -40,8 +55,13 @@ const SplashImage = ({pageTitle}) => {
   `);
   
   let background = pageTitle == "Earth" ? data.earthImage : data.astroImage;
-
-  return <Img fluid={background.childImageSharp.fluid} className={styles.background}/>
+  if (isMobile) {
+    background = pageTitle == "Earth" ? data.mobileEarthImage : data.mobileAstroImage;
+  }
+  if (isMobile == null) {
+    return <Img fluid={undefined} backgroundColor={"#000"} />;
+  }
+  return <Img fluid={background.childImageSharp.fluid} className={styles.background} imgStyle={{objectFit: "cover"}} fadeIn={true} loading="eager"/>;
 }
 
 
