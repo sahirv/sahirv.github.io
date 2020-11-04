@@ -632,12 +632,11 @@ pre tt:after {
 }
 
 .mainlink {
-  margin-left: 1rem;
+  margin-right: 2rem;
   color: rgb(255, 255, 255);
   text-decoration: none;
   font-weight: 400;
-  font-size: 24px;
-  margin-left: 2rem;
+  font-size: 30px;
 }
 
 .mainlinkcontainer{
@@ -652,36 +651,20 @@ pre tt:after {
 }
 
 .mainlinkbar {
-  text-align: center;
+  text-align: left;
   margin-bottom: 5rem;
   margin-right: 5rem;
-  margin-left: 0rem;
-  margin-top: 15rem;
+  margin-left: 10%;
+  padding-left: 20px;
+  margin-top: 5rem;
 }
 
 .draweropen {
   transform: scaleY(1);
 }
 
-@media only screen and (max-width: 600px) {
-  html {
-    font-size: 100%;
-  }
-  .maintitle {
-    font-size: 38px !important;
-    margin-bottom: 3rem !important;
-    margin-top: 5rem;
-  }
-  .mainlinkbar {
-    display: none !important;
-  }
+@media only screen and (max-width: 660px) {
   .footericon {
     font-size: 25px
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .maintitle {
-    font-weight: 400 !important;
   }
 }

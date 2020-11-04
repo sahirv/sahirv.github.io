@@ -1,0 +1,42 @@
+.astroDescription {
+    background: #fdfdfd;
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    padding-left: 10px;
+}
+
+.astroNav {
+    margin-left: 10%;
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+.astroNavButton {
+    display: inline-block;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.selected {
+    color: #04539c;
+    font-weight: 500;
+    padding-bottom: 5px;
+    border-bottom: 3px solid;
+}
+
+@media only screen and (max-width: 660px) {
+    .astroDescription {
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 95%;
+    }
+
+    .astroNav {
+        margin-left: 0px;
+    }
+}

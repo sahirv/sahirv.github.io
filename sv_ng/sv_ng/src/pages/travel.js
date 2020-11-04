@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
 import PhotoGrid from "../components/photogrid/grid"
 
-import Map from "../map/map"
+import Map from "../components/map/map"
 
 const SecondPage = () => {
   const data = useStaticQuery(graphql`
@@ -28,7 +28,7 @@ const SecondPage = () => {
       edges {
         node {
           childImageSharp {
-            fluid(maxWidth: 3000, quality: 100) {
+            fluid(maxWidth: 2000, quality: 72) {
               originalName
               ...GatsbyImageSharpFluid
               src
@@ -45,6 +45,8 @@ const SecondPage = () => {
           image
           title
           location
+          x
+          y
         }
       }
     }
@@ -63,6 +65,7 @@ const SecondPage = () => {
   let continents = data.map_data.nodes[0].map_data;
 
   const [currentContinent, setCurrentContinent] = React.useState(undefined);
+  const [filterOpen, setFilterOpen] = React.useState(false);
 
   const gridRef = useRef();
 
@@ -73,15 +76,29 @@ const SecondPage = () => {
 
   let continentClickCallback = (c) => {
     setCurrentContinent(c);
-    scrollToGrid(gridRef);
+    // scrollToGrid(gridRef);
+    setFilterOpen(!filterOpen);
+  }
+
+  let toggleFilter = () => {
+    setFilterOpen(!filterOpen);
   }
 
   return(
   <Layout pageTitle="Earth">
     <SEO title="Earth - Travel" />
-    <div className={styles.earthDescription}>What should we do with our time but to explore? I haven't seen much of the world, but the parts I have seen offered plenty of beautiful scenes and moments. Click on the continents to filter.</div>
-    <Map continents={continents} onContinentClick={continentClickCallback}/>
+    <div className={styles.earthDescription}>What should we do with our time but to explore? I haven't seen much of the world, but the parts I have seen offered plenty of beautiful scenes and moments.</div>
     <hr className={styles.hrStyle}></hr>
+    <div >
+      <h4 className={styles.continentLabel}>Showing {currentContinent ? currentContinent : "All Continents"}</h4>
+      <div className={styles.continentFilterButton} onClick={() => toggleFilter()}>
+          <i class="fa fa-filter"></i>
+      </div>
+      <div className={filterOpen ? styles.continentFilterContainer + " " + styles.filterOpen : styles.continentFilterContainer}>
+        <p className={styles.filterInstructions}>Click on the continents to filter.</p>
+        <Map continents={continents} onContinentClick={continentClickCallback} imageDetails={imageDetails}/>
+      </div>
+    </div>
     <PhotoGrid
       gridRef={gridRef}
       continent={currentContinent} 

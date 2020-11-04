@@ -1,0 +1,16 @@
+#rect_top {
+    transform: rotate(0deg);
+    transform-origin: 5px 5px;
+    transition: 0.35s ease-in-out;
+}
+
+#rect_bottom {
+    transform: rotate(0deg);
+    transform-origin: 20px 30px;
+    transition: 0.35s ease-in-out;
+}
+
+#rect_middle {
+    transform: scale(1);
+    transition: 0.35s ease-in-out;
+}

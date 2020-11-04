@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 
 const GridImage = ({image}) => {
     return(
-        <Img fluid={{...image.node.childImageSharp.fluid, aspectRatio: 1.5}}></Img>);
+        <Img fluid={{...image.node.childImageSharp.fluid, aspectRatio: 1.5}} loading="eager"></Img>);
 }
 
 GridImage.propTypes = {

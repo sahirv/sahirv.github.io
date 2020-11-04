@@ -41,7 +41,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/map`,
+        path: `${__dirname}/src/components/map`,
       }
     },
     `gatsby-transformer-json`,
@@ -59,8 +59,13 @@ module.exports = {
         icon: `src/images/svicon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: `${__dirname}/src/svg/` 
+        }
+      }
+    }
   ],
 }

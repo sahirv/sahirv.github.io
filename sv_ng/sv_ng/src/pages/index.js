@@ -26,6 +26,11 @@ const IndexPage = () => (
               <i class="fa fa-linkedin"></i>
             </a>
           </div>
+          <div class="footericon">
+            <a  href="http://instagram.com/sahir.vellani">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </div>
         </footer>
   </Layout>
 )

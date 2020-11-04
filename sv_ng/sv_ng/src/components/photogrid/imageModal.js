@@ -16,7 +16,8 @@ const ImageModal = ({image, imageDetails, isModalOpen, onClose}) => {
         <Modal isOpen={isModalOpen} shouldCloseOnOverlayClick={true} onRequestClose={onClose} className={styles.modal} overlayClassName={styles.overlay}>
             <div className={styles.imageContainer}>
                 <a href={image.node.childImageSharp.fluid.src} target="_blank">
-                    <Img fluid={{...image.node.childImageSharp.fluid}} imgStyle={{objectFit: 'contain'}} className={styles.image}></Img>
+                    {/* <img className={styles.modalImage} src={image.node.childImageSharp.fluid.src} /> */}
+                    <Img fluid={{...image.node.childImageSharp.fluid}} imgStyle={{objectFit: 'contain'}} className={styles.image} loading="eager"></Img>
                 </a>
             </div>
             {detail ? 

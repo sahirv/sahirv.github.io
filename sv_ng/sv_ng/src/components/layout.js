@@ -13,9 +13,10 @@ import styles from "./layout.module.css"
 
 import Header from "./header/header"
 import SplashImage from "./images/splash-image"
-import NavDrawer from "./nav-drawer"
-import NavDrawerButton from "./nav-drawer-button"
+import NavDrawer from "./drawer/nav-drawer"
+import NavDrawerButton from "./drawer/nav-drawer-button"
 import "./layout.css"
+import "./drawer/drawer.css"
 
 const Layout = ({ children, pageTitle }) => {
   const data = useStaticQuery(graphql`
@@ -32,18 +33,10 @@ const Layout = ({ children, pageTitle }) => {
   let isHomePage = () => {return pageTitle == 'Sahir Vellani';}
   let isAstroPage = () => {return pageTitle == 'Astro';}
 
-  let handleScroll = (entries, observer) => {
-    let intersectionRatio = entries[0].intersectionRatio;
-    setTitleSize(intersectionRatio > 0.7 ? 1.0 : intersectionRatio + 0.2);
-    setOpacityIndex(1.5 - intersectionRatio);
-    let colorVal = isEarthPage() ? (1 - intersectionRatio ) * 226 + 10 : 'rgb(236, 236, 236)';
-    setTitleColor('rgb(' + colorVal + ','+ colorVal + ','+ colorVal + ')');
-  }
-
   let handleResize = (entries) => {
     let width;
     if (entries[0].contentBoxSize) {
-      if (entries[0].contentBoxSize.inlineSize){
+      if (entries[0].contentBoxSize.inlineSize != undefined){
         width = entries[0].contentBoxSize.inlineSize;
       }
       else {
@@ -66,37 +59,11 @@ const Layout = ({ children, pageTitle }) => {
   const [isMobile, setIsMobile] = useState(true);
 
   const ref = useRef();
-  let titleStyle = {
-    textAlign: `left`,
-    marginBottom: `16rem`,
-    marginLeft: `2rem`,
-    marginRight: `3rem`,
-    //position: `sticky`,
-    //fontSize: '7vw',//titleSize > 3.1 ? titleSize + "rem" : 3.1 + "rem",
-    fontSize: '7vw',
-    //transform: 'scale(' + titleSize + ')',
-    transition: '0.15s ease-in-out',
-    transformOrigin: 'top',
-    top: `0.7rem`,
-    color: 'rgb(236, 236, 236)',
-    fontWeight: 300,
-    zIndex: 2,
-  };
 
-  let thresholds = [];
-  for (let i = 0.0; i <= 1.0; i+=0.1){
-    thresholds.push(i);
-  }
 
   useEffect(() => {
-    let options = {
-      rootMargin: '0px',
-      threshold: thresholds
-    }
     let resize_observer = new ResizeObserver(handleResize);
-    let observer = new IntersectionObserver(handleScroll, options);
     if (ref.current) {
-      observer.observe(ref.current);
       resize_observer.observe(ref.current);
     }
   }, [ref]);
@@ -105,32 +72,34 @@ const Layout = ({ children, pageTitle }) => {
     setShowDrawer(!showDrawer);
   }
 
+  let classToShow = isHomePage() ? styles.maintitle + " " + styles.mainTitleHome : styles.maintitle + " " + styles.mainTitleOther
+
   return (
     <>
-      <Header opacityIndex={opacityIndex} pageTitle={pageTitle}/>
-      <NavDrawerButton toggle={() => toggle()} className={styles.showDrawerButton}/>
-
-      <div style={{height: '4rem', width: '100%', marginTop: '8rem'}} ref={ref} ></div>
-      <div style={titleStyle} className='maintitle'>
+      {!isMobile ? <Header opacityIndex={opacityIndex} pageTitle={pageTitle}/> : "" }
+      {isMobile ? <NavDrawerButton toggle={() => toggle()} showDrawer={showDrawer} className={styles.showDrawerButton}/> : ""}
+      <div className={classToShow} ref={ref}>
         {pageTitle}
       </div>
       <SplashImage pageTitle={pageTitle} isMobile={isMobile}/>
 
-      <div class="mainlinkbar" style={{display: pageTitle == "Sahir Vellani" ? "block" : "none"}}>
-        <div class="mainlinkcontainer">
-          <Link to={"/astro/"} class="mainlink">Space</Link>
-        </div>
-        <div class="mainlinkcontainer">
-          <Link to={"/travel/"} class="mainlink">Earth</Link>
-        </div>
-      </div>
+      {!isMobile ? 
+        <div class="mainlinkbar" style={{display: isHomePage() ? "block" : "none"}}>
+          <div class="mainlinkcontainer">
+            <Link to={"/astro/"} class="mainlink">Space</Link>
+          </div>
+          <div class="mainlinkcontainer">
+            <Link to={"/travel/"} class="mainlink">Earth</Link>
+          </div>
+        </div> 
+        : "" }
       
       <div
         style={{
           margin: `0 auto`,
-          //maxWidth: 1200,
           padding: `0 1.0875rem 1.45rem`,
           background: '#fdfdfd',
+          zIndex: 1
         }}
       >
         <main>{children}</main>

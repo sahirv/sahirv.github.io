@@ -3,15 +3,77 @@
     text-align: left;
     padding-top: 30px;
     padding-bottom: 20px;
-    width: 100%;
-    margin-right: auto;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    padding-left: 10px;
 }
 
 .hrStyle {
     width: 20%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 25px;
+    margin-top: 20px;
     background-color: #04539c;
     margin-bottom: 10px;
+}
+
+.continentFilterContainer {   
+    transform-origin: top;
+    transition: max-height 0.16s ease;
+    max-height: 0;
+    overflow: hidden;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.continentFilterButton {
+    width: 30px;
+    height: 20px;
+    font-size: 20px;
+    display: inline-block;
+    float: right;
+    margin-top: 15px;
+    margin-right: 10%;
+    transition: 0.26s ease-in-out;
+}
+
+.continentFilterButton:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.filterOpen {
+    max-height: 1000px;
+}
+
+.filterInstructions {
+    margin-right: 10px;
+    font-weight: 100;
+    text-align: right;
+}
+
+.continentLabel {
+    text-transform: capitalize;
+    margin-left: 10%;
+    padding-left: 10px;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 660px) {
+    .continentLabel {
+        font-size: 20px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .filterInstructions {
+        font-size: 15px;
+    }
+    .earthDescription {
+        margin-left: 0px;
+    }
+    .continentFilterButton {
+        margin-right: 10px;
+    }
 }

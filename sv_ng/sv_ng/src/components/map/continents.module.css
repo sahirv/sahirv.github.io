@@ -1,0 +1,9 @@
+.selected {
+    fill:#02203b !important;
+    cursor: default !important;
+}
+
+.map {
+    border: 8px solid #00529c2e;
+    overflow: scroll;
+}

@@ -1,13 +1,15 @@
 .gridContainer {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
+    grid-row-gap: 3px;
+    grid-column-gap: 3px;
     padding-top: 5px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .gridItem {
-    padding: 10px;
+    padding: 2px;
     transition: 0.15s ease-in-out;
 }
 
@@ -101,6 +103,18 @@ p a {
     padding-bottom: 10px;
 }
 
+.modalImage {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 660px) {
+    .gridContainer {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
 
 @media screen and (max-width: 600px) {
     .modal {
@@ -144,6 +158,8 @@ p a {
         grid-column-gap: 2px;
         padding-top: 15px;
         padding-bottom: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     .gridItem {
@@ -154,9 +170,19 @@ p a {
     .overlay {
         background-color: rgb(149 148 148 / 62%)
     }
+
+    /* .modalImage {
+        margin-bottom: -10px;
+        top: 0;
+        transform: translateY(0%);
+    } */
 }
 
 @media screen and (max-width: 450px) {
+    .gridContainer {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
     .modal {
       position: absolute;
       left: 15px;

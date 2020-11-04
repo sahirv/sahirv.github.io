@@ -27,8 +27,7 @@ class Header extends React.Component {
       style={{
         position: 'fixed',
         width: '100%',
-        background: 'rgba(10, 10, 10, 0.9)',
-        opacity: this.props.opacityIndex + 0.3,
+        background: 'rgba(10, 10, 10, 0.7)',
         transition: 'opacity 0.2s ease-in-out',
         zIndex: 1,
         top: 0,

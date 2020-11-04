@@ -21,7 +21,7 @@ import styles from "./home-background.module.css"
 const SplashImage = ({pageTitle, isMobile}) => {
   const data = useStaticQuery(graphql`
     {
-      astroImage: file(relativePath: { eq: "moon6-1-2020.png" }) {
+      astroImage: file(relativePath: { eq: "milkywaypanorama.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
@@ -29,7 +29,7 @@ const SplashImage = ({pageTitle, isMobile}) => {
         }
       }
 
-      earthImage: file(relativePath: { eq: "venice.jpg" }) {
+      earthImage: file(relativePath: { eq: "earthbackground.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 3000, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -37,7 +37,7 @@ const SplashImage = ({pageTitle, isMobile}) => {
         }
       }
 
-      mobileEarthImage: file(relativePath: { eq: "rainier.jpg" }) {
+      mobileEarthImage: file(relativePath: { eq: "serenity.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid
