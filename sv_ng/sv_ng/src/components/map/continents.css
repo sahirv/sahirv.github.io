@@ -1,11 +1,9 @@
-
 #asia {
     fill:#04539c;
     stroke: #fdfdfd;
     stroke-width: 5px;
 }
 #asia:hover {
-    fill:#02203b;
     cursor: pointer;
 }
 
@@ -15,7 +13,6 @@
     stroke-width: 5px;
 }
 #australia:hover {
-    fill:#02203b;
     cursor: pointer;
 }
 
@@ -25,7 +22,6 @@
     stroke-width: 5px;
 }
 #africa:hover {
-    fill:#02203b;
     cursor: pointer;
 }
 
@@ -35,7 +31,6 @@
     stroke-width: 5px;
 }
 #europe:hover {
-    fill:#02203b;
     cursor: pointer;
 }
 
@@ -45,7 +40,6 @@
     stroke-width: 5px;
 }
 #south_america:hover {
-    fill:#02203b;
     cursor: pointer
 }
 
@@ -55,7 +49,6 @@
     stroke-width: 5px;
 }
 #north_america:hover {
-    fill:#02203b;
     cursor: pointer
 }
 

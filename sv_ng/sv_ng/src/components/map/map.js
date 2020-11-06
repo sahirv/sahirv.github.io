@@ -11,7 +11,7 @@ const Map = props => {
             event.preventDefault();
             let map = event.currentTarget.children.worldMapContainer.children.worldMap;
             let zoom = event.deltaY > 0 ? -1 : 1;
-            let scale_factor = 1 + 0.035 * zoom;
+            let scale_factor = 1 + 0.05 * zoom;
             let x = event.pageX - event.currentTarget.offsetLeft;
             let y = event.pageY - event.currentTarget.offsetTop;
             let transform = map.transform.baseVal[0];
@@ -71,7 +71,8 @@ const Map = props => {
             <Continents continents={props.continents} 
                         onContinentClick={props.onContinentClick} 
                         matrix={matrixRef.current} 
-                        imageDetails={props.imageDetails}/>
+                        imageDetails={props.imageDetails}
+                        selectImageCallback={props.selectImageCallback}/>
         </div>
     );
 }

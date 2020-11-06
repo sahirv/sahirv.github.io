@@ -6,10 +6,11 @@ import PropTypes from "prop-types"
 import GridImage from "./gridimage"
 import ImageModal from "./imageModal"
 
-const PhotoGrid = ({thumbnails, images, imageDetails, continent, gridRef}) => {
+const PhotoGrid = ({thumbnails, images, imageDetails, continent, gridRef, pictureFromPin}) => {
     // Modal open/close
     const [isModalOpen, setIsModalOpen] = React.useState(false);
     const [clickedImage, setClickedImage] = React.useState(undefined);
+    const [currentImageSelectedFromPin, setPinImage] = React.useState(undefined);
 
     let closeModal = () => {setIsModalOpen(false);}
     let openModal = () => {setIsModalOpen(true);}
@@ -41,6 +42,14 @@ const PhotoGrid = ({thumbnails, images, imageDetails, continent, gridRef}) => {
         let imageName = e.currentTarget.id;
         setClickedImage(images.find(n => {
             return n.node.childImageSharp.fluid.originalName.includes(imageName);
+        }));
+        openModal();
+    }
+
+    if (pictureFromPin != currentImageSelectedFromPin) {
+        setPinImage(pictureFromPin);
+        setClickedImage(images.find(n => {
+            return n.node.childImageSharp.fluid.originalName.includes(pictureFromPin);
         }));
         openModal();
     }

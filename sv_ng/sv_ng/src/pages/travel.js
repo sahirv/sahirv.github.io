@@ -66,12 +66,18 @@ const SecondPage = () => {
 
   const [currentContinent, setCurrentContinent] = React.useState(undefined);
   const [filterOpen, setFilterOpen] = React.useState(false);
+  const [currentPictureFromPin, setCurrentPictureFromPin] = React.useState(undefined);
 
   const gridRef = useRef();
 
   const scrollToGrid = (ref) => {
     console.log(ref);
     if (ref.current) { window.scrollTo(0, ref.current.offsetTop); }
+  }
+
+  let selectImageCallback = (i) => {
+    setCurrentPictureFromPin(i);
+    console.log(i);
   }
 
   let continentClickCallback = (c) => {
@@ -96,7 +102,7 @@ const SecondPage = () => {
       </div>
       <div className={filterOpen ? styles.continentFilterContainer + " " + styles.filterOpen : styles.continentFilterContainer}>
         <p className={styles.filterInstructions}>Click on the continents to filter.</p>
-        <Map continents={continents} onContinentClick={continentClickCallback} imageDetails={imageDetails}/>
+        <Map continents={continents} onContinentClick={continentClickCallback} imageDetails={imageDetails} selectImageCallback={selectImageCallback}/>
       </div>
     </div>
     <PhotoGrid
@@ -104,7 +110,8 @@ const SecondPage = () => {
       continent={currentContinent} 
       thumbnails={data.thumbnails.edges} 
       images={data.images.edges} 
-      imageDetails={imageDetails}></PhotoGrid>
+      imageDetails={imageDetails}
+      pictureFromPin={currentPictureFromPin}></PhotoGrid>
   </Layout>
 );
   }

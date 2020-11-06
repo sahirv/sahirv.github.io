@@ -27,7 +27,7 @@ const Continents = props => {
     let pins = [];
     for (var i in props.imageDetails){
         let image = props.imageDetails[i];
-        pins.push(<Thumbtack matrix={props.matrix} x={image.x} y={image.y}/>);
+        pins.push(<Thumbtack matrix={props.matrix} imageDetails={image} clickCallback={props.selectImageCallback}/>);
     }
 
     useEffect(() => {
@@ -48,7 +48,7 @@ const Continents = props => {
                 onClick={() => {props.onContinentClick(undefined); setClickedContinent(undefined);}}
                 version="1.0"
                 width="100%"
-                viewBox="0 0 468 210"
+                viewBox="0 0 468 200"
                 id="worldMap"
                 ref={mapRef}
                 style={{transformOrigin: "0 0"}}>
