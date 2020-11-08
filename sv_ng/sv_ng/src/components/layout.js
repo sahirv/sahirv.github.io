@@ -18,7 +18,7 @@ import NavDrawerButton from "./drawer/nav-drawer-button"
 import "./layout.css"
 import "./drawer/drawer.css"
 
-const Layout = ({ children, pageTitle }) => {
+const Layout = ({ children, pageTitle, pageDescription }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -56,7 +56,7 @@ const Layout = ({ children, pageTitle }) => {
   const [opacityIndex, setOpacityIndex] = useState(0.5);
   const [titleColor, setTitleColor] = useState(isEarthPage() ? 'rgb(10,10,10)' : 'rgb(236, 236, 236)');
   const [showDrawer, setShowDrawer] = useState(false);
-  const [isMobile, setIsMobile] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
   const ref = useRef();
 

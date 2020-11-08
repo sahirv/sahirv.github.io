@@ -4,12 +4,13 @@
 }
 
 .map {
-    border: 8px solid #00529c2e;
+    border: 1px solid #00529c2e;
     overflow: scroll;
 }
 
 .thumbtack:hover .pinhead{
     fill: #000000 !important;
+    cursor: pointer;
 }
 
 .pinhead {

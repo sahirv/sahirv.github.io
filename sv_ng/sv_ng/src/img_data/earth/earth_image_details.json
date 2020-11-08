@@ -79,7 +79,7 @@
             "title": "Mt. Si",
             "location": "Snoqualmie Valley, USA",
             "x": "78",
-            "y": "36"
+            "y": "32"
         },
         {
             "description": "Mount Vesuvius can faintly be seen towering above the ocean from Sorrento, Italy.",
@@ -116,6 +116,83 @@
             "location": "Yosemite National Park, USA",
             "x": "70",
             "y": "42"
-        }        
+        },
+        {
+            "description": "",
+            "image": "duckyOR.jpg",
+            "continent": "north america",
+            "title": "Little Duck",
+            "location": "Trinity Lake, OR",
+            "x": "75.8",
+            "y": "36.2",
+            "tags": ["wildlife"]
+        },
+        {
+            "description": "",
+            "image": "blackducky.jpg",
+            "continent": "north america",
+            "title": "Black Duck",
+            "location": "Trinity Lake, OR",
+            "x": "75.6",
+            "y": "36.2",
+            "tags": ["wildlife"]
+        },
+        {
+            "description": "",
+            "image": "hurricaneridgedeer-2.jpg",
+            "continent": "north america",
+            "title": "Young Buck",
+            "location": "",
+            "x": "75",
+            "y": "31.7",
+            "tags": ["wildlife"]
+        },
+        {
+            "description": "",
+            "image": "rubybeach.jpg",
+            "continent": "north america",
+            "title": "Ruby Beach at Sunset",
+            "location": "Olympic Peninsula, WA",
+            "x": "73.2",
+            "y": "32"
+        },
+        {
+            "description": "",
+            "image": "tolmierainier-2.jpg",
+            "continent": "north america",
+            "title": "Mt. Rainier",
+            "location": "Tolmie Peak, WA",
+            "x": "76",
+            "y": "34"
+        },
+        {
+            "description": "",
+            "image": "heronOR.jpg",
+            "continent": "north america",
+            "title": "Blue Heron in Flight",
+            "location": "Trinity Lake, OR",
+            "x": "75.5",
+            "y": "36",
+            "tags": ["wildlife"]
+        },
+        {
+            "description": "",
+            "image": "hood.jpg",
+            "continent": "north america",
+            "title": "Mt. Hood from Trinity Lake",
+            "location": "Trinity Lake, OR",
+            "x": "75",
+            "y": "36"
+        },
+        {
+            "description": "",
+            "image": "hoodblueheron.jpg",
+            "continent": "north america",
+            "title": "Blue Heron",
+            "location": "Trinity Lake, OR",
+            "x": "75.2",
+            "y": "36",
+            "tags": ["wildlife"]
+        }
     ]
 }

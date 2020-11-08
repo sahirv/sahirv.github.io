@@ -48,7 +48,7 @@ const Continents = props => {
                 onClick={() => {props.onContinentClick(undefined); setClickedContinent(undefined);}}
                 version="1.0"
                 width="100%"
-                viewBox="0 0 468 200"
+                viewBox="40 0 385 205"
                 id="worldMap"
                 ref={mapRef}
                 style={{transformOrigin: "0 0"}}>

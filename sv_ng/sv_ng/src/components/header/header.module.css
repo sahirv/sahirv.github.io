@@ -2,9 +2,8 @@
     margin-left: 1rem;
     color: rgb(236, 236, 236);
     text-decoration: none;
-    font-weight: 500;
-    font-size: 100;
-    
+    font-weight: 300;
+    font-size: 25px;
 }
 
 .navbutton:hover {
@@ -14,6 +13,8 @@
 .navbutton {
     transition: 0.15s ease-in-out;
     display: inline-block;
+    padding-top: 11px;
+    padding-bottom: 5px;
 }
 
 .navdrawer {

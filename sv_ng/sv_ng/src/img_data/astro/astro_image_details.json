@@ -94,6 +94,27 @@
                 "Standard Tripod"
             ],
             "link": "https://en.wikipedia.org/wiki/C/2020_F3_(NEOWISE)"
+        },
+        {
+            "image": "meteor.jpg",
+            "title": "Perseids",
+            "description": "A summer trip to the Olympic Mountains in Washington, USA was made extra special by the Perseids. At Ruby beach, on the western coast of the United States, I was able to see the Milky Way for the first time. This is when I truly felt connected with the universe, peering out towards the galactic core of our vast galaxy. Luckily enough, my trip to the Washington coast coincided with the meteor shower; and my luck was further compounded when I caught a meteor burning up in our atmosphere as I was taking a picture of the sky.",
+            "equipment": [
+                "Nikkor 18-55mm",
+                "Nikon D3500"
+            ],
+            "link": "https://blogs.nasa.gov/Watch_the_Skies/tag/perseids/"
+        },
+        {
+            "image": "milkywayOR.jpg",
+            "title": "Milky Way ft. Jupiter and Saturn",
+            "description": "Our galactic core. At Lost Lake near Mt. Hood, Oregon, I took some time to take in the summer skies and photograph our own galaxy. Using my camera, smartphone as a remote shutter, and the Star Adventurer as a star tracker, I was able to capture multiple 90s sub exposures from a Bortle 2 sky. The results, as you can see, are glorious. The bright spot is Jupiter, with Saturn on its left. We can also see a number of nebulae scattered along the galactic plane.",
+            "equipment": [
+                "Nikkor 18-55mm",
+                "Nikon D3500",
+                "Sky-Watcher Star Adventurer"
+            ],
+            "link": "https://imagine.gsfc.nasa.gov/science/objects/milkyway1.html"
         }
     ]
 }

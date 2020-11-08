@@ -6,11 +6,16 @@ import PropTypes from "prop-types"
 import GridImage from "./gridimage"
 import ImageModal from "./imageModal"
 
-const PhotoGrid = ({thumbnails, images, imageDetails, continent, gridRef, pictureFromPin}) => {
+const PhotoGrid = ({thumbnails, images, imageDetails, continent, gridRef, pictureFromPin, isWildlife}) => {
     // Modal open/close
     const [isModalOpen, setIsModalOpen] = React.useState(false);
     const [clickedImage, setClickedImage] = React.useState(undefined);
     const [currentImageSelectedFromPin, setPinImage] = React.useState(undefined);
+
+    // Show images from all continents if in wildlife tab
+    if (isWildlife) {
+        continent = undefined;
+    }
 
     let closeModal = () => {setIsModalOpen(false);}
     let openModal = () => {setIsModalOpen(true);}
@@ -20,21 +25,20 @@ const PhotoGrid = ({thumbnails, images, imageDetails, continent, gridRef, pictur
     for (var thumbnail in thumbnails) {
 
         // Fetch image detail for thumbnail to check continent (for earth pages)
-        let detail;
-        if (continent){
-            detail = imageDetails.find(n => {return n.image.includes(thumbnails[thumbnail].node.childImageSharp.fluid.originalName)});
-        }
+        let detail = imageDetails.find(n => {return n.image.includes(thumbnails[thumbnail].node.childImageSharp.fluid.originalName)});
 
         if (continent 
             && continent == detail.continent 
             || !continent){
-            gridItems.push(
-                <div 
-                className={styles.gridItem}
-                id={thumbnails[thumbnail].node.childImageSharp.fluid.originalName}
-                onClick={(e) => findClickedImageAndOpenModal(e)}>
-                    <GridImage image={thumbnails[thumbnail]}></GridImage>
-                </div>);
+            if (isWildlife && detail.tags && (detail.tags.includes("wildlife")) || !isWildlife){
+                gridItems.push(
+                    <div 
+                    className={styles.gridItem}
+                    id={thumbnails[thumbnail].node.childImageSharp.fluid.originalName}
+                    onClick={(e) => findClickedImageAndOpenModal(e)}>
+                        <GridImage image={thumbnails[thumbnail]}></GridImage>
+                    </div>);
+            }
         }
     }
 
