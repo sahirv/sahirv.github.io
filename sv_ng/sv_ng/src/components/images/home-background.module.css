@@ -3,7 +3,7 @@
     z-index: -2;
     position: fixed !important;
     top: 0;
-    min-height: 650px;
+    min-height: 100%;
 }
 
 @media screen and (max-width: 600px) {

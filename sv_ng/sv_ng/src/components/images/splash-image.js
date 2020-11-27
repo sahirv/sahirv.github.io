@@ -21,9 +21,9 @@ import styles from "./home-background.module.css"
 const SplashImage = ({pageTitle, isMobile}) => {
   const data = useStaticQuery(graphql`
     {
-      astroImage: file(relativePath: { eq: "milkywaypanorama.jpg" }) {
+      astroImage: file(relativePath: { eq: "olympic-6.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 2000) {
+          fluid(maxWidth: 3000, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

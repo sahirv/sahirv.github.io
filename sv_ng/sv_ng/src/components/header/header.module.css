@@ -6,8 +6,12 @@
     font-size: 25px;
 }
 
-.navbutton:hover {
-    transform: scale(1.05); 
+.navlink:hover path{
+    fill: rgb(236, 236, 236) !important; 
+}
+
+.navlink:hover circle{
+    fill: rgb(236, 236, 236) !important; 
 }
 
 .navbutton {

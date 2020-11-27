@@ -4,35 +4,88 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "font-awesome/css/font-awesome.css"
 import styles from "./index.module.css"
+import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
 
-const IndexPage = () => (
-  <Layout pageTitle="Sahir Vellani">
-    <SEO title="Home" />
-    <div className={styles.about}>
-      <h3>About</h3>
-      <p>This website serves as a repository containing images of things that I found beautiful in our universe. As I document the world around and above me, 
-        I'll also share my learnings so that they may benefit others as well. 
-      </p>
-      <p>To learn about me or my professional work, check out my LinkedIn and Github profiles.</p>
-    </div>
-    <footer style={{background: '#fdfdfd',}}>
-          <div class="footericon">
-            <a  href="http://github.com/sahirv">
-              <i class="fa fa-github"></i>
-            </a>
+const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+  {
+    astroImage: file(relativePath: { eq: "milkywaypanorama.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    earthImage: file(relativePath: { eq: "tahoe.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    blogImage: file(relativePath: { eq: "rb16.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+  `);
+
+  return (
+    <Layout pageTitle="Sahir Vellani">
+      <SEO title="Home" />
+      <div className={styles.about}>
+        <h3>About</h3>
+        <p>Welcome to my abode on the web. This website serves multiple purposes. First, it is the platform that I have chosen to share images that I've taken of the heavens and earth. This for me as much as it is for you. I've always wanted to explore not just the world around me, but the universe as well. Maintaining this website allows me to record my journey, as I explore the universe. Another purpose of the site is to offer insights as I navigate through my professional journey. I am a software engineer at Microsoft, working on the Edge browser. As a developer on the web platform team, I've been able to learn quite a bit about how browsers (especially chromium based ones) operate. Therefore, I will use this space to also share ideas and tools that I have found interesting and useful as a developer of the browser and developer for the browser.
+        </p>
+      </div>
+      <hr className={styles.mainDivider}></hr>
+      <div className={styles.informationBlockContainer}>
+        <div className={styles.informationBlock}>
+          <div className={styles.astroTitle}>
+            <div className={styles.astroTitleText}>Astro</div>
+            <Img fluid={{...data.astroImage.childImageSharp.fluid, aspectRatio: 1.2}} className={styles.astroTitleImage} imgStyle={{objectFit: "cover"}} fadeIn={true} loading="eager"/>
           </div>
-          <div class="footericon">
-            <a  href="http://linkedin.com/in/sahirvellani">
-              <i class="fa fa-linkedin"></i>
-            </a>
+          <div className={styles.astroDescription}>Welcome to my astrophotography portfolio. I've been amazed by the cosmos my entire life, and I'm very lucky to have the priviledge of exploring them. The sky is home to many jewels, and it would be selfish of me not to share them with you. All photos have been taken and processed by myself.</div>
+        </div>
+        <div className={styles.informationBlock}>
+          <div className={styles.astroTitle}>
+            <div className={styles.astroTitleText}>Travel</div>
+            <Img fluid={{...data.earthImage.childImageSharp.fluid, aspectRatio: 1.2}} className={styles.astroTitleImage} imgStyle={{objectFit: "cover"}} fadeIn={true} loading="eager"/>
           </div>
-          <div class="footericon">
-            <a  href="http://instagram.com/sahir.vellani">
-              <i class="fa fa-instagram"></i>
-            </a>
+          <div className={styles.astroDescription}>Welcome to my astrophotography portfolio. I've been amazed by the cosmos my entire life, and I'm very lucky to have the priviledge of exploring them. The sky is home to many jewels, and it would be selfish of me not to share them with you. All photos have been taken and processed by myself.</div>
+        </div>
+        <div className={styles.informationBlock}>
+          <div className={styles.astroTitle}>
+            <div className={styles.astroTitleText}>Blog</div>
+            <Img fluid={{...data.blogImage.childImageSharp.fluid, aspectRatio: 1.2}} className={styles.astroTitleImage} imgStyle={{objectFit: "cover"}} fadeIn={true} loading="eager"/>
           </div>
-        </footer>
-  </Layout>
-)
+          <div className={styles.astroDescription}>Welcome to my astrophotography portfolio. I've been amazed by the cosmos my entire life, and I'm very lucky to have the priviledge of exploring them. The sky is home to many jewels, and it would be selfish of me not to share them with you. All photos have been taken and processed by myself.</div>
+        </div>
+      </div>
+      
+      <footer style={{background: 'rgb(248,248,248)', marginTop: '20px'}}>
+            <div class="footericon">
+              <a  href="http://github.com/sahirv">
+                <i class="fa fa-github"></i>
+              </a>
+            </div>
+            <div class="footericon">
+              <a  href="http://linkedin.com/in/sahirvellani">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </div>
+            <div class="footericon">
+              <a  href="http://instagram.com/sahirv.photos">
+                <i class="fa fa-instagram"></i>
+              </a>
+            </div>
+          </footer>
+    </Layout>
+  )
+}
 
 export default IndexPage

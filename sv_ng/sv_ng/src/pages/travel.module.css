@@ -1,12 +1,13 @@
 .earthDescription {
-    background: #fdfdfd;
+    background: rgb(248, 248, 248);
     text-align: left;
-    padding-top: 30px;
+    padding-top: 120px;
     padding-bottom: 20px;
     width: 80%;
     margin-right: 10%;
     margin-left: 10%;
     padding-left: 10px;
+    font-size: 16px;
 }
 
 .hrStyle {
@@ -63,17 +64,26 @@
 }
 
 .travelNav {
-    margin-left: 10%;
-    padding-top: 20px;
-    padding-left: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    padding-left: 0px;
     font-size: 25px;
     margin-bottom: 30px;
+    background-color: rgb(253,253,253);
+    position: fixed;
+    z-index: 1;
+    text-align: center;
+    left: 0;
+    border-bottom: 1px solid #00000061;
 }
 
 .travelNavButton {
     display: inline-block;
     margin-right: 40px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .selected {
@@ -102,13 +112,11 @@
         margin-right: 10px;
     }
     .travelNav {
-        padding-left: 0px;
-        margin-left: 3%;
         font-size: 20px;
     }
     .travelNavButton {
         display: inline-block;
-        margin-right: 10px;
+        margin-right: 30px;
         cursor: pointer;
     }
     .continentContainer {   

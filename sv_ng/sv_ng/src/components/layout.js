@@ -75,37 +75,29 @@ const Layout = ({ children, pageTitle, pageDescription }) => {
   let classToShow = isHomePage() ? styles.maintitle + " " + styles.mainTitleHome : styles.maintitle + " " + styles.mainTitleOther
 
   return (
-    <>
+    <div ref={ref}>
       {!isMobile ? <Header opacityIndex={opacityIndex} pageTitle={pageTitle}/> : "" }
       {isMobile ? <NavDrawerButton toggle={() => toggle()} showDrawer={showDrawer} className={styles.showDrawerButton}/> : ""}
-      <div className={classToShow} ref={ref}>
-        {pageTitle}
-      </div>
-      <SplashImage pageTitle={pageTitle} isMobile={isMobile}/>
-
-      {!isMobile ? 
-        <div class="mainlinkbar" style={{display: isHomePage() ? "block" : "none"}}>
-          <div class="mainlinkcontainer">
-            <Link to={"/astro/"} class="mainlink">Space</Link>
-          </div>
-          <div class="mainlinkcontainer">
-            <Link to={"/travel/"} class="mainlink">Earth</Link>
-          </div>
-        </div> 
-        : "" }
+      {isHomePage() ? 
+        <>
+        <div className={styles.maintitle}>
+          {pageTitle}
+        </div>
+        <SplashImage pageTitle={pageTitle} isMobile={isMobile}/></> 
+      : ""}
       
       <div
         style={{
           margin: `0 auto`,
           padding: `0 1.0875rem 1.45rem`,
-          background: '#fdfdfd',
+          background: 'rgb(248,248,248)',
           zIndex: 1
         }}
       >
         <main>{children}</main>
       </div>
       <NavDrawer showDrawer={showDrawer} toggle={() => toggle()}/>
-    </>
+    </div>
   )
 }
 

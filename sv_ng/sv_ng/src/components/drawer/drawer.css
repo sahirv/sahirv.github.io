@@ -6,7 +6,7 @@
 
 #rect_bottom {
     transform: rotate(0deg);
-    transform-origin: 20px 30px;
+    transform-origin: 13px 26px;
     transition: 0.35s ease-in-out;
 }
 

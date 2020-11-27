@@ -193,6 +193,16 @@
             "x": "75.2",
             "y": "36",
             "tags": ["wildlife"]
+        },
+        {
+            "description": "During a trip to Atlanta, I decided to hike up a local landmark called Stone Mountain. It was a hot, humid, and busy day with many hikers making their way to the top of the hill. At the top, I found an individual seemingly meditating despite the commotion.",
+            "image": "meditation.jpg",
+            "continent": "north america",
+            "title": "A Moment of Solace",
+            "location": "Stone Mountain, GA",
+            "x": "111.2",
+            "y": "49",
+            "tags": ["people"]
         }
     ]
 }
