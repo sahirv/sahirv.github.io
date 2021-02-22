@@ -1,9 +1,13 @@
 .about {
-    background: rgb(248,248,248);
-    padding-right: 10%;
+    background: rgb(255 255 255);
+    margin-right: 10%;
     margin-left: 10%;
-    padding-top: 20px;
+    margin-top: 40px;
     text-align: center;
+    padding: 2%;
+    border: 1px solid #bcbcbc;
+    border-radius: 2px;
+    box-shadow: 2px 2px 5px 0px #bebebe;
 }
 
 .about h3 {
@@ -29,9 +33,10 @@
   }
 
 .astroDescription {
-    background: rgb(248,248,248);
+    background: rgb(255, 255, 255);
     text-align: center;
     width: 100%;
+    height: 190px;
     padding-left: 10px;
     font-size: 13px;
     padding-top: 4%;
@@ -45,6 +50,11 @@
     border-right: 1px solid #bcbcbc;
     border-bottom: 1px solid #bcbcbc;
     border-radius: 0 0 2px 2px;
+    overflow: scroll;
+}
+
+.astroDescription::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 
 .astroTitle {
@@ -60,8 +70,8 @@
     position: absolute;
     z-index: 1;
     color: #fdfdfd;
-    margin-top: 1%;
-    margin-left: 1%;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 .informationBlock {
@@ -69,12 +79,15 @@
     border-radius: 2px;
     box-shadow: 2px 2px 5px 0px #bebebe;
     display: inline-block;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 1%;
+    margin-right: 1%;
+    transition: 0.05s ease-in;
+    cursor: pointer;
 }
 
 .informationBlockContainer {
-    margin-left: 10%;
+    margin-left: 9%;
+    margin-top: 40px;
 }
 
 .mainDivider {
@@ -82,8 +95,45 @@
     margin-left: 10%;
 }
 
+.informationBlock:hover {
+    transform: scale(1.01);
+    box-shadow: 2px 2px 8px 0px #dbdbdb;
+}
+
+@media only screen and (max-width: 1080px) {
+    .astroDescription {
+        height: 220px;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .astroDescription {
+        height: 280px;
+    }
+}
+
 @media only screen and (max-width: 660px) {
+    .informationBlock {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .informationBlockContainer {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .astroDescription {
+        height: auto;
+        font-size: 13px;
+    }
     .about {
-        margin-left: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .about p{
+        font-size: 14px;
+        line-height: 19px;
     }
 }

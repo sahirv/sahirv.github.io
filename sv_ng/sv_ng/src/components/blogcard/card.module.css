@@ -1,0 +1,27 @@
+.cardContainer {
+    width: 100%;
+    border: 1px solid #bcbcbc;
+    background-color: #fff;
+    border-radius: 2px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.cardTitle {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.cardDescription {
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 660px) {
+    .cardTitle {
+        padding-bottom: 10px;
+    }
+    .cardContainer {
+        padding-right: 10px;
+    }
+}

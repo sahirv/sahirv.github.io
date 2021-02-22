@@ -31,6 +31,7 @@ const ImageModal = ({image, imageDetails, isModalOpen, onClose}) => {
                 </div> 
                 : <div className={styles.imageDetails}>No image details found</div>
             }
+            <div className={styles.moreTextIndicator}></div>
         </Modal>);
 }
 

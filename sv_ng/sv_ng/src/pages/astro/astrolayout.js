@@ -11,12 +11,12 @@ const AstroLayout = ({children, section}) => {
                 <div className={section == "images" ? styles.astroNavButton + " " + styles.selected : styles.astroNavButton}>
                     <Link to={"/astro/"}>Gallery</Link>
                 </div>
-                <div className={section == "equipment" ? styles.astroNavButton + " " + styles.selected : styles.astroNavButton}>
+                {/* <div className={section == "equipment" ? styles.astroNavButton + " " + styles.selected : styles.astroNavButton}>
                     <Link to={"/astro/equipment"}>Equipment</Link>
                 </div>
                 <div className={section == "blog" ? styles.astroNavButton + " " + styles.selected : styles.astroNavButton}>
                     <Link to={"/astro/blog"}>Blog</Link>
-                </div>
+                </div> */}
             </div>
             <SEO title="Astrophotography" />
             <div className={styles.childrenContainer}>

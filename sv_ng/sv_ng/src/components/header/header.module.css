@@ -6,14 +6,6 @@
     font-size: 25px;
 }
 
-.navlink:hover path{
-    fill: rgb(236, 236, 236) !important; 
-}
-
-.navlink:hover circle{
-    fill: rgb(236, 236, 236) !important; 
-}
-
 .navbutton {
     transition: 0.15s ease-in-out;
     display: inline-block;
@@ -39,6 +31,9 @@
         display: none;
     }
     .showheader {
+        display: none;
+    }
+    .navbutton {
         display: none;
     }
 }

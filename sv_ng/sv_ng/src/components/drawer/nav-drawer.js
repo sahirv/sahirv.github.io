@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styles from "./drawer.module.css"
+import HomeIcon from "../../svg/homelogo.svg"
 import "./drawer.css"
 
 const NavDrawer = ({showDrawer, toggle}) => {
@@ -20,6 +21,9 @@ const NavDrawer = ({showDrawer, toggle}) => {
                     </div>
                     <div className={styles.drawerLinkContainer}>
                         <Link to="/travel/" className={styles.drawerLink} onClick={() => toggle()}>Earth</Link>
+                    </div>
+                    <div className={styles.drawerLinkContainer}>
+                        <Link to="/blog/" className={styles.drawerLink} onClick={() => toggle()}>Blog</Link>
                     </div>
                 </div>
             </div>

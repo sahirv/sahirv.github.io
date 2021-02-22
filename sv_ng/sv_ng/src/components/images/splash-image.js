@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styles from "./home-background.module.css"
@@ -19,6 +19,11 @@ import styles from "./home-background.module.css"
 // `
 
 const SplashImage = ({pageTitle, isMobile}) => {
+  const [mobile, setMobile] = useState(null);
+    useEffect(() => {
+      setMobile(window.innerWidth > 615);
+    }, []);
+
   const data = useStaticQuery(graphql`
     {
       astroImage: file(relativePath: { eq: "olympic-6.jpg" }) {
@@ -44,7 +49,7 @@ const SplashImage = ({pageTitle, isMobile}) => {
           }
         }
       }
-      mobileAstroImage: file(relativePath: { eq: "hercules-mobile.jpg" }) {
+      mobileAstroImage: file(relativePath: { eq: "rosette_mobile.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -58,8 +63,8 @@ const SplashImage = ({pageTitle, isMobile}) => {
   if (isMobile) {
     background = pageTitle == "Earth" ? data.mobileEarthImage : data.mobileAstroImage;
   }
-  if (isMobile == null) {
-    return <Img fluid={undefined} backgroundColor={"#000"} />;
+  if (mobile == null) {
+    return <Img fluid={undefined} backgroundColor={"#000"} className={styles.background} imgStyle={{objectFit: "cover"}}/>;
   }
   return <Img fluid={background.childImageSharp.fluid} className={styles.background} imgStyle={{objectFit: "cover"}} fadeIn={true} loading="eager"/>;
 }

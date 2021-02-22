@@ -72,12 +72,10 @@ const Layout = ({ children, pageTitle, pageDescription }) => {
     setShowDrawer(!showDrawer);
   }
 
-  let classToShow = isHomePage() ? styles.maintitle + " " + styles.mainTitleHome : styles.maintitle + " " + styles.mainTitleOther
-
   return (
     <div ref={ref}>
-      {!isMobile ? <Header opacityIndex={opacityIndex} pageTitle={pageTitle}/> : "" }
-      {isMobile ? <NavDrawerButton toggle={() => toggle()} showDrawer={showDrawer} className={styles.showDrawerButton}/> : ""}
+      <Header opacityIndex={opacityIndex} pageTitle={pageTitle}/>
+      {isMobile === true ? <NavDrawerButton toggle={() => toggle()} showDrawer={showDrawer} className={styles.showDrawerButton}/> : ""}
       {isHomePage() ? 
         <>
         <div className={styles.maintitle}>
@@ -89,7 +87,7 @@ const Layout = ({ children, pageTitle, pageDescription }) => {
       <div
         style={{
           margin: `0 auto`,
-          padding: `0 1.0875rem 1.45rem`,
+          padding: `1px 1.0875rem 0px 1.45rem`,
           background: 'rgb(248,248,248)',
           zIndex: 1
         }}

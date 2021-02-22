@@ -1,7 +1,10 @@
+.childrenContainer{
+    padding-top: 130px;
+}
 .earthDescription {
     background: rgb(248, 248, 248);
     text-align: left;
-    padding-top: 120px;
+    padding-top: 0px;
     padding-bottom: 20px;
     width: 80%;
     margin-right: 10%;
@@ -67,7 +70,7 @@
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-top: 50px;
+    margin-top: 51px;
     padding-left: 0px;
     font-size: 25px;
     margin-bottom: 30px;
@@ -87,7 +90,7 @@
 }
 
 .selected {
-    color: #04539c;
+    color: #00831d;;
     font-weight: 500;
     padding-bottom: 5px;
     border-bottom: 3px solid;
