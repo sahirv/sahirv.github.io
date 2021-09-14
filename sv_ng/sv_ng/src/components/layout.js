@@ -19,16 +19,6 @@ import "./layout.css"
 import "./drawer/drawer.css"
 
 const Layout = ({ children, pageTitle, pageDescription }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-  
   let isEarthPage = () => {return pageTitle == 'Earth';}
   let isHomePage = () => {return pageTitle == 'Sahir Vellani';}
   let isAstroPage = () => {return pageTitle == 'Astro';}
@@ -38,8 +28,7 @@ const Layout = ({ children, pageTitle, pageDescription }) => {
     if (entries[0].contentBoxSize) {
       if (entries[0].contentBoxSize.inlineSize != undefined){
         width = entries[0].contentBoxSize.inlineSize;
-      }
-      else {
+      } else {
         width = entries[0].contentBoxSize[0].inlineSize;
       }
     } else {

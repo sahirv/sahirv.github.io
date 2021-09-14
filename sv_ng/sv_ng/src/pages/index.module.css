@@ -3,19 +3,20 @@
     margin-right: 10%;
     margin-left: 10%;
     margin-top: 40px;
-    text-align: center;
     padding: 2%;
-    border: 1px solid #bcbcbc;
+    /* border: 1px solid #bcbcbc; */
     border-radius: 2px;
-    box-shadow: 2px 2px 5px 0px #bebebe;
+    /* box-shadow: 2px 2px 5px 0px #bebebe; */
 }
 
 .about h3 {
     margin-bottom: 0;
+    font-weight: 200;
 }
 
 .about p {
     font-size: 17px;
+    font-weight: 300;;
 }
 
 .maintitle {
@@ -46,9 +47,9 @@
     line-height: 20px;
     font-weight: 500;
     color: #4a4a4a;
-    border-left: 1px solid #bcbcbc;
+    /* border-left: 1px solid #bcbcbc;
     border-right: 1px solid #bcbcbc;
-    border-bottom: 1px solid #bcbcbc;
+    border-bottom: 1px solid #bcbcbc; */
     border-radius: 0 0 2px 2px;
     overflow: scroll;
 }

@@ -42,12 +42,12 @@
      id="namedview853"
      showgrid="true"
      inkscape:zoom="17.657143"
-     inkscape:cx="14.216309"
-     inkscape:cy="12.885335"
+     inkscape:cx="9.9404191"
+     inkscape:cy="14.748232"
      inkscape:window-x="0"
      inkscape:window-y="23"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g849"
+     inkscape:current-layer="text845"
      inkscape:document-rotation="0">
     <inkscape:grid
        type="xygrid"
@@ -63,16 +63,16 @@
        id="text845"
        style="font-style:normal;font-weight:normal;font-size:55.7743px;line-height:1.25;font-family:sans-serif;fill:none;fill-opacity:1;stroke:#ececec;stroke-width:2.7608;stroke-miterlimit:2.5;stroke-dasharray:none;stroke-opacity:1">
       <path
-         d="m 40.863634,35.465297 -28.105018,9.994711 28.105018,9.940244 v 4.956505 L 5.9502294,47.693158 V 43.17239 L 40.863634,30.508792 Z"
-         style="fill:#fff;stroke:#ececec;stroke-width:2.7608;stroke-miterlimit:2.5;stroke-dasharray:none;stroke-opacity:1"
+         d="M 39.956984,33.337223 10.384221,43.98386 39.956984,54.572479 v 5.279803 L 3.2202746,46.362673 V 41.547028 L 39.956984,28.057419 Z"
+         style="fill:#ffffff;stroke:#ececec;stroke-width:2.92287;stroke-miterlimit:2.5;stroke-dasharray:none;stroke-opacity:1"
          id="path847" />
       <path
-         d="m 78.691022,22.257028 h 4.629703 L 69.159282,68.091083 h -4.629703 z"
-         style="fill:#fff;stroke:#ececec;stroke-width:2.7608;stroke-miterlimit:2.5;stroke-dasharray:none;stroke-opacity:1"
+         d="m 70.689281,19.267416 h 4.871482 L 60.659757,68.091097 h -4.871482 z"
+         style="fill:#ffffff;stroke:#ececec;stroke-width:2.92287;stroke-miterlimit:2.5;stroke-dasharray:none;stroke-opacity:1"
          id="path849" />
       <path
-         d="M 89.284878,35.465297 V 30.508792 L 124.19828,43.17239 v 4.520768 L 89.284878,60.356757 v -4.956505 l 28.050552,-9.940244 z"
-         style="fill:#fff;stroke:#ececec;stroke-width:2.7608;stroke-miterlimit:2.5;stroke-dasharray:none;stroke-opacity:1"
+         d="m 90.907323,33.337223 v -5.279804 l 36.736717,13.489609 v 4.815645 L 90.907323,59.852282 V 54.572479 L 120.4228,43.98386 Z"
+         style="fill:#ffffff;stroke:#ececec;stroke-width:2.92287;stroke-miterlimit:2.5;stroke-dasharray:none;stroke-opacity:1"
          id="path851" />
     </g>
   </g>

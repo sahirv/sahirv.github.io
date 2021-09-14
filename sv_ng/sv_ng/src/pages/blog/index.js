@@ -11,6 +11,11 @@ const SecondPage = () => (
     <SEO title="Blog" />
     <div className={styles.childrenContainer}>
         <h1>Blog</h1>
+        {/* <div className={styles.entry}>
+          <Card title={"Performance Tracing in Chrome and Edge"}
+          description={"The tracing tab is a powerful tool that can be harnessed by web developers looking to streamline their websites and web-apps."}
+          link={"/blog/performance-tracing-in-chrome-and-edge"}></Card>
+        </div> */}
         <div className={styles.entry}>
           <Card title={"Detecting when an element changes size with ResizeObserver"}
           description={"ResizeObserver is a JavaScript web API that allows you to run code whenever an element's size changes."}

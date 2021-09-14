@@ -71,15 +71,55 @@ var ro = new ResizeObserver( entries => {
         This box visually is the same as content-box, but its dimensions are recorded in physical device pixels rather than CSS pixels, which are what 
         CSS normally uses.</div>
         <div className={styles.blogText}>This is useful for obtaining pixel snapped dimensions, which are essential for graphics related purposes; for example,
-        setting the right canvas size which avoids Moire patterns. Let's say we have an canvas that is 50px wide, but located at (0.5, 0). Its width
+        setting the right canvas size which avoids Moire patterns. Let's say we have a canvas that is 50px wide, but located at (0.5, 0). Its width
         in device pixels would be 51 because it is covering half of the 0th pixel and half of the 51st pixel (in order to avoid anti-aliasing, the browser
         rounds up 0.5 to 1 and fully allocates that pixel as part of the canvas. In this case, we will want to resize the canvas width to 51px, so that
         everything inside it is drawn correctly.</div>
         <div className={styles.blogText}>Another application of dp content-box is on high DPI (dots per inch) displays. Due to pixel snapping described
         earlier, element.width * window.devicePixelRatio is not as accurate as getting the pixel snapped width from ResizeObserver. Check out this excellent
         <a href="https://web.dev/device-pixel-content-box/"> article</a> for further details on device-pixel-content-box.</div>
+        <div className={styles.blogSubheading}>Example Usage In sahirvellani.com</div>
+        <div className={styles.blogText}>I use ResizeObserver for my personal website in order to run some code when the page changes size. Here
+        is how I did it, and how it can be used if you are using React.</div>
+        <pre>
+          {`
+const MyComponent = ({ children }) => {
+  let handleResize = (entries) => {
+    let width;
+    if (entries[0].contentBoxSize) {
+      if (entries[0].contentBoxSize.inlineSize != undefined){
+        width = entries[0].contentBoxSize.inlineSize;
+      } else {
+        width = entries[0].contentBoxSize[0].inlineSize;
+      }
+    } else {
+      width = entries[0].contentRect.width;
+    }
+    if (width < 600) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }
 
+  useEffect(() => {
+    let resize_observer = new ResizeObserver(handleResize);
+    if (ref.current) {
+      resize_observer.observe(ref.current);
+    }
+  }, [ref]);
 
+  return (
+    <div ref={ref}>
+      ...
+    </div>
+  )
+}
+          `}
+        </pre>
+        <div className={styles.blogText}>I use the <a href="https://reactjs.org/docs/hooks-effect.html">UseEffect</a> hook to initialize the ResizeObserver 
+        and set it to observe the element I'm interested in via <a href="https://reactjs.org/docs/hooks-reference.html#useref">ref</a>. 
+        It is re-initialized whenever the referenced element changes.</div>
 </div>
   </Layout>)
 }

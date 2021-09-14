@@ -187,6 +187,32 @@
             ],
             "link": "https://www.nasa.gov/feature/goddard/2017/messier-42-the-orion-nebula",
             "id": 12
+        },
+        {
+            "image": "M8182.jpg",
+            "title": "M81/M82 - Bodes Galaxy and Cigar Galaxy",
+            "description": "Located approximately 12 million light years away, the Bodes and Cigar galaxies are two of the most prominent galaxies that can be observed from the Northern Hemisphere. Bodes galaxy is the grand design spiral galaxy, with its two arms clearly visible in the image. The Cigar galaxy is edge on (we're looking down the side of the galaxy), and hydrogen alpha (red veins) can be seen being emitted perpendicular to the plane of the galaxy. This image uses 1hr 17mins of data collected from my backyard; 50s exposures at ISO 1600.",
+            "equipment": [
+                "Sky-Watcher EvoStar 100ED",
+                "Full Spectrum Modified Canon EOS Rebel SL2",
+                "Sky-Watcher HEQ5",
+                "ZWO Asi 120mm Mini",
+                "Sky-Watcher 8x50 Finder Scope"
+            ],
+            "link": "https://science.nasa.gov/galaxy-wars-m81-and-m82",
+            "id": 13
+        },
+        {
+            "image": "trails.jpg",
+            "title": "Star Trails Around the Celestial North Pole",
+            "description": "A couple hours worth of data to make these star trails, captured from my backyard! Capturing star trails is much easier than imaging an object, as there's no need for tracking. Simply set the camera on a tripod and let it snap awway. The darker the sky, the more lines visible. This picture was taken from a city, there are light pollution gradients visible and not as many trails as there could have been.",
+            "equipment": [
+                "Canon 18-55mm @ 18mm",
+                "Full Spectrum Modified Canon EOS Rebel SL2",
+                "Standard Tripod"
+            ],
+            "link": "https://en.wikipedia.org/wiki/Star_trail",
+            "id": 14
         }
     ]
 }

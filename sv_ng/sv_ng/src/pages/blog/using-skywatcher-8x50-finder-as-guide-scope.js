@@ -43,6 +43,7 @@ const SecondPage = () => {
     <div className={styles.childrenContainer}>
         <h1>How to Convert your Sky-Watcher 8x50 Finder into a Guide Scope</h1>
         <div className={styles.blogDescription}>{blogDescription}</div>
+        <div className={styles.mediumLink}><a href="https://sahirvellani.medium.com/how-to-convert-your-sky-watcher-8x50-finder-into-a-guide-scope-56c62a81e710">Find this article on Medium here</a></div>
         <div className={styles.blogText}>The telescope I use for backyard astronomy and astrophotography is a Sky-Watcher EvoStar 100ED.
         It came with an 8x50 right angle finder scope (8x magnification with an aperture of 50mm). Since this is roughly the size of the average guidescope,
         I thought I could convert this to one. There are many people who have done this and there are plenty of posts about it in forums such as CloudyNights.

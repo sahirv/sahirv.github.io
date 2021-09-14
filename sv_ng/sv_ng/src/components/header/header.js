@@ -7,6 +7,8 @@ import AstroIcon from "../../svg/astrologo.svg"
 import EarthIcon from "../../svg/landscapelogo.svg"
 import HomeIcon from "../../svg/homelogo.svg"
 import TechIcon from "../../svg/techlogo.svg"
+import PhotosIcon from "../../svg/camera.svg"
+import FilmIcon from "../../svg/film.svg"
 
 const Header = (props) => {
 
@@ -38,12 +40,13 @@ const Header = (props) => {
       className={"a"}
       style={{
         maxWidth: 960,
-        paddingRight: `11%`,
+        paddingRight: `12%`,
         float: "right",
       }}
     >
       <NavButton to="/astro/"><AstroIcon /></NavButton>
-      <NavButton to="/travel/"><EarthIcon /></NavButton>
+      <NavButton to="/photography/"><PhotosIcon /></NavButton>
+      <NavButton to="/videos/"><FilmIcon /></NavButton>
       <NavButton to="/blog/"><TechIcon /></NavButton>
     </div>
   </header>);

@@ -37,17 +37,6 @@ const IndexPage = () => {
   return (
     <Layout pageTitle="Sahir Vellani">
       <SEO title="Home" />
-      <div className={styles.about}>
-        <h3>About</h3>
-        <p>Welcome to my abode on the web. This website serves multiple purposes. First, it is the platform that I have chosen to share 
-          images that I've taken of the heavens and earth. This is for me as much as it is for you. I've always wanted to explore not just 
-          the world around me, but the universe as well. Maintaining this website allows me to record my journey, as I explore the universe. 
-          Another purpose of the site is to offer insights as I navigate through my professional journey. I am a software engineer at 
-          Microsoft, working on the Edge browser. As a developer on the web platform team, I've been able to learn quite a bit about how 
-          browsers (especially chromium based ones) operate. Therefore, I will use this space to also share ideas and tools that I have 
-          found interesting and useful as a developer of the browser and developer for the browser.
-        </p>
-      </div>
       {/* <hr className={styles.mainDivider}></hr> */}
       <div className={styles.informationBlockContainer}>
         <Link to={"/astro/"}>
@@ -61,7 +50,7 @@ const IndexPage = () => {
             to share them with you. All photos have been taken and processed by myself.</div>
           </div>
         </Link>
-        <Link to={"/travel/"}>
+        <Link to={"/photography/"}>
           <div className={styles.informationBlock}>
             <div className={styles.astroTitle}>
               <div className={styles.astroTitleText}>Earth</div>
@@ -83,6 +72,18 @@ const IndexPage = () => {
             can help others achieve their goals. </div>
           </div>
         </Link>
+      </div>
+
+      <div className={styles.about}>
+        <h3>About</h3>
+        <p>Welcome to my abode on the web. This website serves multiple purposes. First, it is the platform that I have chosen to share 
+          images that I've taken of the heavens and earth. This is for me as much as it is for you. I've always wanted to explore not just 
+          the world around me, but the universe as well. Maintaining this website allows me to record my journey, as I explore the universe. 
+          Another purpose of the site is to offer insights as I navigate through my professional journey. I am a software engineer at 
+          Microsoft, working on the Edge browser. As a developer on the web platform team, I've been able to learn quite a bit about how 
+          browsers (especially chromium based ones) operate. Therefore, I will use this space to also share ideas and tools that I have 
+          found interesting and useful as a developer of the browser and developer for the browser.
+        </p>
       </div>
       
       <footer style={{background: 'rgb(248,248,248)', marginTop: '20px'}}>
