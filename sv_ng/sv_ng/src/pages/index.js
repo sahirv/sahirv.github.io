@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "font-awesome/css/font-awesome.css"
 import styles from "./index.module.css"
+/* swithc mobile styles and styles and add style condition if mobile*/
 import Img from "gatsby-image"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
@@ -31,6 +32,13 @@ const IndexPage = () => {
         }
       }
     }
+    videoImage: file(relativePath: { eq: "atv.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
   `);
 
@@ -39,37 +47,54 @@ const IndexPage = () => {
       <SEO title="Home" />
       {/* <hr className={styles.mainDivider}></hr> */}
       <div className={styles.informationBlockContainer}>
-        <Link to={"/astro/"}>
-          <div className={styles.informationBlock}>
-            <div className={styles.astroTitle}>
-              <div className={styles.astroTitleText}>Cosmos</div>
-              <Img fluid={{...data.astroImage.childImageSharp.fluid, aspectRatio: 1.2}} className={styles.astroTitleImage} imgStyle={{objectFit: "cover"}} fadeIn={true} loading="eager"/>
-            </div>
-            <div className={styles.astroDescription}>My astrophotography portfolio. I've been amazed by the cosmos my entire life, 
-            and I'm very lucky to have the priviledge of exploring them. The sky is home to many jewels, and it would be selfish of me not 
-            to share them with you. All photos have been taken and processed by myself.</div>
-          </div>
-        </Link>
+      <div className={styles.astroTitleTextMobile}>Photography</div>
         <Link to={"/photography/"}>
           <div className={styles.informationBlock}>
             <div className={styles.astroTitle}>
-              <div className={styles.astroTitleText}>Earth</div>
-              <Img fluid={{...data.earthImage.childImageSharp.fluid, aspectRatio: 1.2}} className={styles.astroTitleImage} imgStyle={{objectFit: "cover"}} fadeIn={true} loading="eager"/>
+              <Img fluid={{...data.earthImage.childImageSharp.fluid, aspectRatio: 1.75}} className={styles.astroTitleImage} imgStyle={{objectFit: "cover"}} fadeIn={true} loading="eager"/>
             </div>
-            <div className={styles.astroDescription}>Our planet as I see it. Here you will find images of human life, wildlife, and landscapes. 
+            <div className={styles.astroDescription}>
+            <div className={styles.astroTitleText}>Photography</div>
+              Our planet as I see it. Here you will find images of human life, wildlife, and landscapes. 
             I try to document the images as best as I can, and share what they mean to me. You will also find a map that shows where each image 
             has been taken. Hopefully it is completely red at some point in my life.</div>
           </div>
         </Link>
+        <div className={styles.astroTitleTextMobile}>Astrophotography</div>
+        <Link to={"/astro/"}>
+          <div className={styles.informationBlock}>
+            <div className={styles.astroDescription}>
+            <div className={styles.astroTitleText}>Astrophotography</div>
+              My astrophotography portfolio. I've been amazed by the cosmos my entire life, 
+            and I'm very lucky to have the priviledge of exploring them. The sky is home to many jewels, and it would be selfish of me not 
+            to share them with you. All photos have been taken and processed by myself.</div>
+            <div className={styles.astroTitle}>
+              <Img fluid={{...data.astroImage.childImageSharp.fluid, aspectRatio: 1.75}} className={styles.astroTitleImage} imgStyle={{objectFit: "cover"}} fadeIn={true} loading="eager"/>
+            </div>
+          </div>
+        </Link>
+        <div className={styles.astroTitleTextMobile}>Blog</div>
         <Link to={"/blog/"}>
           <div className={styles.informationBlock}>
             <div className={styles.astroTitle}>
-              <div className={styles.astroTitleText}>Blog</div>
-              <Img fluid={{...data.blogImage.childImageSharp.fluid, aspectRatio: 1.2}} className={styles.astroTitleImage} imgStyle={{objectFit: "cover"}} fadeIn={true} loading="eager"/>
+              <Img fluid={{...data.blogImage.childImageSharp.fluid, aspectRatio: 1.75}} className={styles.astroTitleImage} imgStyle={{objectFit: "cover"}} fadeIn={true} loading="eager"/>
             </div>
-            <div className={styles.astroDescription}>My musings. Blog posts that cover a range of topics from web development and programming to 
+            <div className={styles.astroDescription}>
+            <div className={styles.astroTitleText}>Blog</div>
+              My musings. Blog posts that cover a range of topics from web development and programming to 
             astrophotography. I do this with the intention that the learnings over the course of my professional and recreational journies so far 
             can help others achieve their goals. </div>
+          </div>
+        </Link>
+        <div className={styles.astroTitleTextMobile}>Videography</div>
+        <Link to={"/videos/"}>
+          <div className={styles.informationBlock}>
+            <div className={styles.astroDescription}>
+            <div className={styles.astroTitleText}>Videography</div>
+              Documenting adventures in motion picture. </div>
+            <div className={styles.astroTitle}>
+              <Img fluid={{...data.videoImage.childImageSharp.fluid, aspectRatio: 1.75}} className={styles.astroTitleImage} imgStyle={{objectFit: "cover"}} fadeIn={true} loading="eager"/>
+            </div>
           </div>
         </Link>
       </div>

@@ -2,7 +2,11 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styles from "./drawer.module.css"
+import AstroIcon from "../../svg/astrologo.svg"
 import HomeIcon from "../../svg/homelogo.svg"
+import TechIcon from "../../svg/techlogo.svg"
+import PhotosIcon from "../../svg/camera.svg"
+import FilmIcon from "../../svg/film.svg"
 import "./drawer.css"
 
 const NavDrawer = ({showDrawer, toggle}) => {
@@ -14,16 +18,19 @@ const NavDrawer = ({showDrawer, toggle}) => {
             <div className={styles.navDrawer}>
                 <div className={styles.drawerLinksContainerGroup}>
                     <div className={styles.drawerLinkContainer}>
-                        <Link to="/" className={styles.drawerLink} onClick={() => toggle()}>Home</Link>
+                        <Link to="/" className={styles.drawerLink} onClick={() => toggle()}><div className={styles.iconContainer}><HomeIcon /></div>Home</Link>
                     </div>
                     <div className={styles.drawerLinkContainer}>
-                        <Link to="/astro/" className={styles.drawerLink} onClick={() => toggle()}>Space</Link>
+                        <Link to="/astro/" className={styles.drawerLink} onClick={() => toggle()}><div className={styles.iconContainer}><AstroIcon /></div>Astrophotography</Link>
                     </div>
                     <div className={styles.drawerLinkContainer}>
-                        <Link to="/travel/" className={styles.drawerLink} onClick={() => toggle()}>Earth</Link>
+                        <Link to="/photography/" className={styles.drawerLink} onClick={() => toggle()}><div className={styles.iconContainer}><PhotosIcon /></div>Photography</Link>
                     </div>
                     <div className={styles.drawerLinkContainer}>
-                        <Link to="/blog/" className={styles.drawerLink} onClick={() => toggle()}>Blog</Link>
+                        <Link to="/videos/" className={styles.drawerLink} onClick={() => toggle()}><div className={styles.iconContainer}><FilmIcon /></div>Videography</Link>
+                    </div>
+                    <div className={styles.drawerLinkContainer}>
+                        <Link to="/blog/" className={styles.drawerLink} onClick={() => toggle()}><div className={styles.iconContainer}><TechIcon /></div>Blog</Link>
                     </div>
                 </div>
             </div>

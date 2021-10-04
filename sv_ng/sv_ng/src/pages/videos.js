@@ -90,7 +90,7 @@ const SecondPage = () => {
 
       <div className={styles.videoContainer}>
         <h4>Olympic National Park - Summer 2021</h4>
-        <iframe width="700" height="394" src="https://www.youtube.com/embed/ltZlmji4frI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+        <iframe src="https://www.youtube.com/embed/ltZlmji4frI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
       </div>
     </div>
   </Layout>

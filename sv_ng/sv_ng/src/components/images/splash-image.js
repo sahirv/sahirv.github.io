@@ -49,7 +49,7 @@ const SplashImage = ({pageTitle, isMobile}) => {
           }
         }
       }
-      mobileAstroImage: file(relativePath: { eq: "rosette_mobile.jpg" }) {
+      mobileAstroImage: file(relativePath: { eq: "goldengate-mobile.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid
