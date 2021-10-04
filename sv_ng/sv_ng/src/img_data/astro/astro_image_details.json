@@ -213,6 +213,18 @@
             ],
             "link": "https://en.wikipedia.org/wiki/Star_trail",
             "id": 14
+        },
+        {
+            "image": "whirlpool.png",
+            "title": "Whirlpool Galaxy",
+            "description": "Second Attempt at the Whirlpool Galaxy. More integration time and no reducer.",
+            "equipment": [
+                "Sky-Watcher EvoStar 100ED",
+                "Canon EOS Rebel SL2",
+                "Sky-Watcher HEQ5"
+            ],
+            "link": "https://www.nasa.gov/feature/goddard/2017/messier-51-the-whirlpool-galaxy",
+            "id": 15
         }
     ]
 }

@@ -1,6 +1,61 @@
 {
     "earth_image_details": [
         {
+            "description": "",
+            "image": "rubybeachtent.jpg",
+            "continent": "north america",
+            "title": "At the Edge",
+            "location": "Ruby Beach, OR",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
+            "description": "",
+            "image": "atv1.jpg",
+            "continent": "north america",
+            "title": "Going for a Ride",
+            "location": "Florence, OR",
+            "x": "75.2",
+            "y": "36",
+            "tags": ["people"]
+        },
+        {
+            "description": "ATVing on the Oregon sand dunes.",
+            "image": "atv2.jpg",
+            "continent": "north america",
+            "title": "Thrills from Above",
+            "location": "Florence, OR",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
+            "description": "",
+            "image": "goldengate.jpg",
+            "continent": "north america",
+            "title": "Golden Gate Bridge",
+            "location": "San Francisco, CA",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
+            "description": "",
+            "image": "windsorferrari.png",
+            "continent": "north america",
+            "title": "Ferrari outside Windsor Castle",
+            "location": "Windsor, UK",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
+            "description": "",
+            "image": "californiahills.jpg",
+            "continent": "north america",
+            "title": "Rolling Hills of Northern California",
+            "location": "Mt. Diable, CA",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
             "description": "Anfield Stadium, Liverpool. I took an exchange term at the University of Sheffield in Fall 2017 so I'd have an excuse to conduct a pilgrimage to Liverpool FC's legendary stadium. This is one of the few pictures I took during my visit. LFC beat Huddersfield 3-0.",
             "image": "anfield.jpg",
             "continent": "europe",
