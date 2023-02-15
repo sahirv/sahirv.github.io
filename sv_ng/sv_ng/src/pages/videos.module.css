@@ -1,6 +1,6 @@
 .childrenContainer{
-    padding-top: 10%;
-    margin: 0% 10% 0% 10%;
+    padding-top: 6%;
+    margin: 0% 1% 0% 1%;
 }
 
 .videoContainer {
@@ -8,8 +8,9 @@
     text-align: center;
 }
 iframe {
-    width: calc(700vw / 10);
-    height: calc(394vw / 10);
+    width: calc(700vw / 11);
+    height: calc(394vw / 11);
+    margin-left: -1.0875rem;
 }
 
 @media only screen and (max-width: 660px) {
@@ -40,5 +41,9 @@ iframe {
     }
     .continentContainer {   
         width: 95%;
+    }
+    iframe {
+        width: calc(700vw / 8);
+        height: calc(394vw / 8);
     }
 }

@@ -1,6 +1,159 @@
 {
     "earth_image_details": [
         {
+            "description": "A reflection of Table mountain on the Chain Lakes loop trailhead.",
+            "image": "chainlakes.jpg",
+            "continent": "north america",
+            "title": "Table Mountain",
+            "location": "North Cascades, WA",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
+            "description": "Needs no description; the Grand Canyon.",
+            "image": "gc-2.jpg",
+            "continent": "north america",
+            "title": "Grand Canyon in Winter",
+            "location": "Grand Canyon South Rim, AZ",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
+            "description": "A pitstop on the road to Hana.",
+            "image": "haleakala-2-2.jpg",
+            "continent": "north america",
+            "title": "Hawaiian Coast",
+            "location": "Keanae, HI",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
+            "description": "The famed sunrise from the summit of the sacred mountain Haleakala in Maui.",
+            "image": "haleakala-2.jpg",
+            "continent": "north america",
+            "title": "Haleakala Sunrise",
+            "location": "Haleakala, HI",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
+            "description": "From the sliding sands trail atop Haleakala. The landscape resembles that of Mordor.",
+            "image": "haleakala.jpg",
+            "continent": "north america",
+            "title": "Haleakala Crater",
+            "location": "Haleakala, HI",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
+            "description": "Green tapestry of old growth trees in the Hoh Rainforst in the heart of Olympic National park.",
+            "image": "hoh-1.jpg",
+            "continent": "north america",
+            "title": "Hoh",
+            "location": "Hoh Rainforest, WA",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
+            "description": "",
+            "image": "snow_lake_river.jpg",
+            "continent": "north america",
+            "title": "Riverside",
+            "location": "Leavenworth, WA",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
+            "description": "",
+            "image": "maui-2.jpg",
+            "continent": "north america",
+            "title": "Riverside",
+            "location": "Leavenworth, WA",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
+            "description": "",
+            "image": "maui-1.jpg",
+            "continent": "north america",
+            "title": "Riverside",
+            "location": "Leavenworth, WA",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
+            "description": "",
+            "image": "maui.jpg",
+            "continent": "north america",
+            "title": "Riverside",
+            "location": "Leavenworth, WA",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
+            "description": "",
+            "image": "msh.jpg",
+            "continent": "north america",
+            "title": "Riverside",
+            "location": "Leavenworth, WA",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
+            "description": "",
+            "image": "rainier-2.jpg",
+            "continent": "north america",
+            "title": "Riverside",
+            "location": "Leavenworth, WA",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
+            "description": "",
+            "image": "rainier-5.jpg",
+            "continent": "north america",
+            "title": "Riverside",
+            "location": "Leavenworth, WA",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
+            "description": "",
+            "image": "snow_lake_river.jpg",
+            "continent": "north america",
+            "title": "Riverside",
+            "location": "Leavenworth, WA",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
+            "description": "",
+            "image": "wedgemount-1.jpg",
+            "continent": "north america",
+            "title": "Riverside",
+            "location": "Leavenworth, WA",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
+            "description": "ATVing on the Oregon sand dunes.",
+            "image": "cows.jpg",
+            "continent": "north america",
+            "title": "Cows",
+            "location": "US HWY 2, WA",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
+            "description": "",
+            "image": "snowy_mountain.jpg",
+            "continent": "north america",
+            "title": "North Cascades",
+            "location": "Lake Diablo, WA",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
             "description": "",
             "image": "rubybeachtent.jpg",
             "continent": "north america",
@@ -11,6 +164,16 @@
         },
         {
             "description": "",
+            "image": "boulder.jpg",
+            "continent": "north america",
+            "title": "Boulder",
+            "location": "Florence, OR",
+            "x": "75.2",
+            "y": "36",
+            "tags": ["people"]
+        },
+        {
+            "description": "",
             "image": "atv1.jpg",
             "continent": "north america",
             "title": "Going for a Ride",
@@ -18,6 +181,24 @@
             "x": "75.2",
             "y": "36",
             "tags": ["people"]
+        },
+        {
+            "description": "",
+            "image": "fall_trees.jpg",
+            "continent": "north america",
+            "title": "Peak of Autumn",
+            "location": "Windsor, UK",
+            "x": "75.2",
+            "y": "36"
+        },
+        {
+            "description": "",
+            "image": "fallbridge.png",
+            "continent": "north america",
+            "title": "Peak of Autumn",
+            "location": "Windsor, UK",
+            "x": "75.2",
+            "y": "36"
         },
         {
             "description": "ATVing on the Oregon sand dunes.",
@@ -51,18 +232,27 @@
             "image": "californiahills.jpg",
             "continent": "north america",
             "title": "Rolling Hills of Northern California",
-            "location": "Mt. Diable, CA",
+            "location": "Mt. Diablo, CA",
             "x": "75.2",
             "y": "36"
         },
         {
-            "description": "Anfield Stadium, Liverpool. I took an exchange term at the University of Sheffield in Fall 2017 so I'd have an excuse to conduct a pilgrimage to Liverpool FC's legendary stadium. This is one of the few pictures I took during my visit. LFC beat Huddersfield 3-0.",
-            "image": "anfield.jpg",
+            "description": "",
+            "image": "tolmierainier-2.jpg",
+            "continent": "north america",
+            "title": "Mt. Rainier",
+            "location": "Tolmie Peak, WA",
+            "x": "76",
+            "y": "34"
+        },
+        {
+            "description": "Mount Vesuvius can faintly be seen towering above the ocean from Sorrento, Italy.",
+            "image": "sorrento.jpg",
             "continent": "europe",
-            "title": "Anfield Stadium",
-            "location": "Liverpool, UK",
-            "x": "212.5",
-            "y": "23"
+            "title": "Sorrento",
+            "location": "Sorrento, Italy",
+            "x": "233",
+            "y": "43"
         },
         {
             "description": "Oracle Park, formerly known as AT&T Park (and a bunch of other things before that). On this particular day, the home team, San Francisco Giants were playing the Chicago Cubs. It's an absolutely stunning venue, with views of the San Francisco bay and Oakland. ",
@@ -137,15 +327,6 @@
             "y": "32"
         },
         {
-            "description": "Mount Vesuvius can faintly be seen towering above the ocean from Sorrento, Italy.",
-            "image": "sorrento.jpg",
-            "continent": "europe",
-            "title": "Sorrento",
-            "location": "Sorrento, Italy",
-            "x": "233",
-            "y": "43"
-        },
-        {
             "description": "Burj Al Arab emerging behind the Souk Madinat, as a man navigates an \"Abra\" through the Souk's waterways. This picture depicts a great microcosm of Dubai as it is today. A newly defined city that boasts state of the art architecture and unimaginable luxury, while striving to maintain its Islamic and Arabian roots.",
             "image": "souk_madinat.jpg",
             "continent": "asia",
@@ -162,6 +343,15 @@
             "location": "Lake Tahoe, USA",
             "x": "73",
             "y": "41"
+        },
+        {
+            "description": "Anfield Stadium, Liverpool. I took an exchange term at the University of Sheffield in Fall 2017 so I'd have an excuse to conduct a pilgrimage to Liverpool FC's legendary stadium. This is one of the few pictures I took during my visit. LFC beat Huddersfield 3-0.",
+            "image": "anfield.jpg",
+            "continent": "europe",
+            "title": "Anfield Stadium",
+            "location": "Liverpool, UK",
+            "x": "212.5",
+            "y": "23"
         },
         {
             "description": "Yosemite National Park truly is the best that California has to offer. It is home to the iconic El Capitain and Half Dome, towering and ancient sequoia trees, and tens of waterfalls - including Yosemite falls, which drop a whopping 739m. It's almost like finding yourself on a foreign planet. The granite cliffs stand apparent in midst of giant sequioa groves and lush meadows. Finding yourself on top of one of them is a must, as you're treated to incredible vistas unlike any that the rest of the world has to offer.",
@@ -210,15 +400,6 @@
             "location": "Olympic Peninsula, WA",
             "x": "73.2",
             "y": "32"
-        },
-        {
-            "description": "",
-            "image": "tolmierainier-2.jpg",
-            "continent": "north america",
-            "title": "Mt. Rainier",
-            "location": "Tolmie Peak, WA",
-            "x": "76",
-            "y": "34"
         },
         {
             "description": "",

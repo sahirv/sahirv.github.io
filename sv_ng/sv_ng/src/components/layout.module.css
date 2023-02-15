@@ -25,9 +25,9 @@
 @media only screen and (max-width: 660px) {
     .maintitle {
         font-weight: 400 !important;
-        font-size: 50px !important;
-        margin-bottom: 3rem !important;
-        margin-top: 20rem;
+        font-size: 55px !important;
+        margin-bottom: 21vh !important;
+        margin-top: 72vh;
         margin-left: 10px;
         text-align: right;
         margin-right: 1rem;
@@ -36,7 +36,6 @@
 
 @media only screen and (max-width: 450px) {
     .maintitle {
-        margin-top: 90vh;
         line-height: 55px;
     }
 }

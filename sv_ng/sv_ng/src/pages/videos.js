@@ -87,9 +87,12 @@ const SecondPage = () => {
   <Layout pageTitle="Earth">
     <SEO title="Earth - Travel" />
     <div className={styles.childrenContainer}>
-
       <div className={styles.videoContainer}>
-        <h4>Olympic National Park - Summer 2021</h4>
+        <h4>OREGON | Summer 2021</h4>
+        <iframe src="https://www.youtube.com/embed/voMdRKzszxo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+      </div>
+      <div className={styles.videoContainer}>
+        <h4>OLYMPIC NATIONAL PARK | Summer 2021</h4>
         <iframe src="https://www.youtube.com/embed/ltZlmji4frI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
       </div>
     </div>

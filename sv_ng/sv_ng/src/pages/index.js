@@ -127,7 +127,12 @@ const IndexPage = () => {
                 <i class="fa fa-instagram"></i>
               </a>
             </div>
-          </footer>
+            <div class="footericon">
+              <a  href="https://www.youtube.com/channel/UCQbjLiDQUu-gUJ-drcX-8MQ">
+                <i class="fa fa-youtube"></i>
+              </a>
+            </div>
+      </footer>
     </Layout>
   )
 }
