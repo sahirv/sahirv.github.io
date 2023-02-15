@@ -1,5 +1,5 @@
 import React, { useRef } from "react"
-import styles from "./videos.module.css"
+import * as styles from "./videos.module.css"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"

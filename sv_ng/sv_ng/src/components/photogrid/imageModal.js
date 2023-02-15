@@ -1,13 +1,13 @@
 import React from 'react'
 import { render } from 'react-dom'
 import PropTypes from "prop-types"
-import styles from './grid.module.css'
-import Img from "gatsby-image"
+import * as styles from './grid.module.css'
+import { GatsbyImage } from "gatsby-plugin-image"
 import Modal from 'react-modal'
 import { useStaticQuery, graphql } from "gatsby"
 
 const ImageModal = ({image, imageDetails, isModalOpen, onClose}) => {
-    let detail = imageDetails.find(n => {return n.image.includes(image.node.childImageSharp.fluid.originalName)});
+    let detail = imageDetails.find(n => {return n.image.includes(image.node.childImageSharp.parent.relativePath)});
     let equipmentDetails = [];
     if (detail && detail.equipment) {
         detail.equipment.forEach((e) => equipmentDetails.push(<p className={styles.equipmentText}>{e}</p>));
@@ -15,9 +15,9 @@ const ImageModal = ({image, imageDetails, isModalOpen, onClose}) => {
     return(
         <Modal isOpen={isModalOpen} shouldCloseOnOverlayClick={true} onRequestClose={onClose} className={styles.modal} overlayClassName={styles.overlay}>
             <div className={styles.imageContainer}>
-                <a href={image.node.childImageSharp.fluid.src} target="_blank">
+                <a href={image.node.childImageSharp.gatsbyImageData.images.fallback.src} target="_blank">
                     {/* <img className={styles.modalImage} src={image.node.childImageSharp.fluid.src} /> */}
-                    <Img fluid={{...image.node.childImageSharp.fluid}} imgStyle={{objectFit: 'contain'}} className={styles.image} loading="eager"></Img>
+                    <GatsbyImage image={{...image.node.childImageSharp.gatsbyImageData}} imgStyle={{objectFit: 'contain'}} className={styles.image} loading="eager"></GatsbyImage>
                 </a>
             </div>
             {detail ? 

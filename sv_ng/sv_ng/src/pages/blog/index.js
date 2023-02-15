@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import styles from "./blog.module.css"
+import * as styles from "./blog.module.css"
 import Card from "../../components/blogcard/card"
 
 const SecondPage = () => (

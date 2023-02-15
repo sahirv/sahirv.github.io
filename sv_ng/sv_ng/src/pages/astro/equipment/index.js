@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import AstroLayout from "../astrolayout"
-import styles from "../astro.module.css"
+import * as styles from "../astro.module.css"
 
 
 const AstroBlog = () => {

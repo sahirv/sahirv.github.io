@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./card.module.css"
+import * as styles from "./card.module.css"
 import {Link} from "gatsby"
 
 const Card = ({title, description, image, link}) => {

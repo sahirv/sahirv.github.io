@@ -1,5 +1,5 @@
 import React, { useState, createRef, useRef, useEffect } from "react"
-import styles from "./continents.module.css"
+import * as styles from "./continents.module.css"
 import Thumbtack from "./thumbtack.js"
 
 const Continents = props => {

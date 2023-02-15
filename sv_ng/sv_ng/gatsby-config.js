@@ -55,6 +55,7 @@ module.exports = {
     `gatsby-transformer-json`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -71,7 +72,7 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: `${__dirname}/src/svg/` 
+          include: /svg/
         }
       }
     },

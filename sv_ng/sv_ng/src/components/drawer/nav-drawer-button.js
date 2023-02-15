@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import styles from "./drawer.module.css"
+import * as styles from "./drawer.module.css"
 
 const NavDrawerButton = ({toggle, showDrawer}) => {
     let top_open = styles.rect_top_active  + " " + styles.rectstyle ;

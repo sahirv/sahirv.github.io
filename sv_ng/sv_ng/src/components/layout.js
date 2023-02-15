@@ -9,7 +9,7 @@ import React, { useEffect, useState, useRef } from "react"
 import PropTypes, { nominalTypeHack } from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
-import styles from "./layout.module.css"
+import * as styles from "./layout.module.css"
 
 import Header from "./header/header"
 import SplashImage from "./images/splash-image"

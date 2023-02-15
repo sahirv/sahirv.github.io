@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import styles from "./home-background.module.css"
+import { GatsbyImage } from "gatsby-plugin-image"
+import * as styles from "./home-background.module.css"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -28,45 +28,37 @@ const SplashImage = ({pageTitle, isMobile}) => {
     {
       astroImage: file(relativePath: { eq: "olympic-6.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 3000, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FULL_WIDTH, width: 3000, quality: 100)
         }
       }
 
       earthImage: file(relativePath: { eq: "earthbackground.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 3000, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FULL_WIDTH, width: 3000)
         }
       }
 
       mobileEarthImage: file(relativePath: { eq: "serenity.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1000, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FULL_WIDTH, width: 3000)
         }
       }
       mobileAstroImage: file(relativePath: { eq: "goldengate-mobile.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1000, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FULL_WIDTH, width: 3000)
         }
       }
     }
   `);
   
-  let background = pageTitle == "Earth" ? data.earthImage : data.astroImage;
+  let background = pageTitle == "Earth" ? data.earthImage.childImageSharp.gatsbyImageData : data.astroImage.childImageSharp.gatsbyImageData;
   if (isMobile) {
     background = pageTitle == "Earth" ? data.mobileEarthImage : data.mobileAstroImage;
   }
   if (mobile == null) {
-    return <Img fluid={undefined} backgroundColor={"#000"} className={styles.background} imgStyle={{objectFit: "cover"}}/>;
+    return <GatsbyImage fluid={undefined} backgroundColor={"#000"} className={styles.background} imgStyle={{objectFit: "cover"}}/>;
   }
-  return <Img fluid={background.childImageSharp.fluid} className={styles.background} imgStyle={{objectFit: "cover"}} fadeIn={true} loading="eager"/>;
+  return <GatsbyImage image={background} className={styles.background}/>;
 }
 
 

@@ -1,5 +1,5 @@
 import React, { useRef } from "react"
-import styles from "./travel.module.css"
+import * as styles from "./travel.module.css"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -9,17 +9,19 @@ import PhotoGrid from "../components/photogrid/grid"
 
 import Map from "../components/map/map"
 
-const SecondPage = () => {
+const SecondPage = ({location}) => {
   const data = useStaticQuery(graphql`
   {
     thumbnails: allFile(filter: {sourceInstanceName: {eq: "earth"}}) {
       edges {
         node {
           childImageSharp {
-            fluid(maxWidth: 500, quality: 80, cropFocus: CENTER) {
-              originalName
-              ...GatsbyImageSharpFluid
+            parent {
+              ... on File {
+                relativePath
+              }
             }
+            gatsbyImageData(layout: FULL_WIDTH, width: 500, quality: 80, transformOptions: {fit: COVER, cropFocus: ATTENTION}, aspectRatio: 1.2)
           }
         }
       }
@@ -28,11 +30,12 @@ const SecondPage = () => {
       edges {
         node {
           childImageSharp {
-            fluid(maxWidth: 2000, quality: 72) {
-              originalName
-              ...GatsbyImageSharpFluid
-              src
+            parent {
+              ... on File {
+                relativePath
+              }
             }
+            gatsbyImageData(layout: FULL_WIDTH, width: 2000, quality: 72)
           }
         }
       }
@@ -64,6 +67,10 @@ const SecondPage = () => {
   `);
   let imageDetails = data.image_data.nodes[0].earth_image_details;
   let continents = data.map_data.nodes[0].map_data;
+
+  let urlParams = new URLSearchParams(location.search);
+    let urlImage = urlParams ? urlParams.get('image') : undefined;
+    debugger;
 
   const [currentContinent, setCurrentContinent] = React.useState("none");
   const [filterOpen, setFilterOpen] = React.useState(false);
@@ -100,6 +107,7 @@ const SecondPage = () => {
         </div>
       </div> : <></> }
       <PhotoGrid
+        location={location}
         gridRef={gridRef}
         continent={currentSection == "all" ? undefined : currentContinent} 
         thumbnails={data.thumbnails.edges} 

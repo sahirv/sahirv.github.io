@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react"
 import Continents from "./continents.js"
-import styles from "./continents.module.css"
+import * as styles from "./continents.module.css"
 
 const Map = props => {
     let ref = useRef(null);

@@ -3,20 +3,21 @@ import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 import PhotoGrid from "../../components/photogrid/grid"
 import AstroLayout from "./astrolayout"
-import { useQueryParam, StringParam } from "use-query-params";
-import styles from "./astro.module.css"
+import * as styles from "./astro.module.css"
 
-const SecondPage = () => {
+const SecondPage = ({location}) => {
   const data = useStaticQuery(graphql`
   {
     thumbnails: allFile(filter: {sourceInstanceName: {eq: "astro"}}, sort: {fields: name, order: ASC}) {
       edges {
         node {
           childImageSharp {
-            fluid(maxWidth: 500, quality: 80, cropFocus: CENTER) {
-              originalName
-              ...GatsbyImageSharpFluid
+            parent {
+              ... on File {
+                relativePath
+              }
             }
+            gatsbyImageData(layout: FULL_WIDTH, width: 500, quality: 80, transformOptions: {fit: COVER, cropFocus: ATTENTION}, aspectRatio: 1.2)
           }
         }
       }
@@ -25,11 +26,12 @@ const SecondPage = () => {
       edges {
         node {
           childImageSharp {
-            fluid(maxWidth: 2000, quality: 72) {
-              originalName
-              ...GatsbyImageSharpFluid
-              src
+            parent {
+              ... on File {
+                relativePath
+              }
             }
+            gatsbyImageData(layout: FULL_WIDTH, width: 2000, quality: 72)
           }
         }
       }
@@ -59,11 +61,9 @@ const SecondPage = () => {
   // sort based on priority id in image details
   imageDetails.sort((a,b) => {return b.id - a.id;})
 
-  const [urlImage, setUrlImage] = useQueryParam("image", StringParam);
-
   return (
     <AstroLayout section="images">
-        <PhotoGrid thumbnails={data.thumbnails.edges} images={data.images.edges} imageDetails={imageDetails} urlImage={urlImage}></PhotoGrid> 
+        <PhotoGrid location={location} thumbnails={data.thumbnails.edges} images={data.images.edges} imageDetails={imageDetails}></PhotoGrid> 
     </AstroLayout>
   );
 }

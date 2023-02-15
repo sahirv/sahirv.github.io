@@ -1,12 +1,12 @@
 import React from 'react'
 import { render } from 'react-dom'
 import PropTypes from "prop-types"
-import styles from './grid.module.css'
-import Img from "gatsby-image"
+import * as styles from './grid.module.css'
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const GridImage = ({image}) => {
     return(
-        <Img fluid={{...image.node.childImageSharp.fluid, aspectRatio: 1.2}} loading="eager"></Img>);
+        <GatsbyImage image={{...image.node.childImageSharp.gatsbyImageData}} loading="eager" />);
 }
 
 GridImage.propTypes = {

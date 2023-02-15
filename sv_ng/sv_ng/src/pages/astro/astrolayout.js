@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import styles from "./astro.module.css"
+import * as styles from "./astro.module.css"
 import { Link } from "gatsby"
 
 const AstroLayout = ({children, section}) => {

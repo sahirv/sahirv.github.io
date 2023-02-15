@@ -1,34 +1,37 @@
 import React, { useRef, useEffect } from 'react'
-import styles from './grid.module.css'
+import * as styles from './grid.module.css'
 import { render } from 'react-dom'
 import { checkPropTypes } from 'prop-types'
 import PropTypes from "prop-types"
 import GridImage from "./gridimage"
 import ImageModal from "./imageModal"
-import { useQueryParam, StringParam } from "use-query-params";
 
-const PhotoGrid = ({thumbnails, images, imageDetails, continent, gridRef, pictureFromPin, isWildlife}) => {
+const PhotoGrid = ({location, thumbnails, images, imageDetails, continent, gridRef, pictureFromPin, isWildlife}) => {
     // Modal open/close
     const [isModalOpen, setIsModalOpen] = React.useState(false);
     const [clickedImage, setClickedImage] = React.useState(undefined);
     const [currentImageSelectedFromPin, setPinImage] = React.useState(undefined);
-    const [urlImage, setUrlImage] = useQueryParam("image", StringParam);
-    const urlRef = useRef(urlImage);
+    let urlParams = new URLSearchParams(location.search);
+    let urlImage = urlParams ? urlParams.get('image') : undefined;
+    let urlRef = useRef(urlImage);
 
     // Show images from all continents if in wildlife tab
     if (isWildlife) {
         continent = undefined;
     }
 
+
     let closeModal = () => {
-        setUrlImage(undefined);
+        urlParams.delete('image');
         urlRef.current = undefined;
         setIsModalOpen(false);
+        window.history.back();
     }
-    let openModal = (img) => {
-        setUrlImage(img);
+    let openModal = (image) => {
+        let url = window.location.href + image;
         setIsModalOpen(true);
-        urlRef.current = img;
+        window.history.pushState({}, "", url);
+        urlRef.current = image;
     }
 
     // Generate thumbnails
@@ -36,8 +39,10 @@ const PhotoGrid = ({thumbnails, images, imageDetails, continent, gridRef, pictur
     for (var detail in imageDetails) {
 
         // Fetch image detail for thumbnail to check continent (for earth pages)
-        let thumbnail = thumbnails.find(n => {return n.node.childImageSharp.fluid.originalName.includes(imageDetails[detail].image)});
-
+        let thumbnail = thumbnails.find(n => {return n.node.childImageSharp.parent.relativePath.includes(imageDetails[detail].image)});
+        if (!thumbnail){
+            continue;
+        }
         if (continent 
             && continent == imageDetails[detail].continent 
             || !continent){
@@ -45,7 +50,7 @@ const PhotoGrid = ({thumbnails, images, imageDetails, continent, gridRef, pictur
                 gridItems.push(
                     <div 
                     className={styles.gridItem}
-                    id={thumbnail.node.childImageSharp.fluid.originalName}
+                    id={thumbnail.node.childImageSharp.parent.relativePath}
                     onClick={(e) => findClickedImageAndOpenModal(e)}>
                         <GridImage image={thumbnail}></GridImage>
                     </div>);
@@ -55,7 +60,7 @@ const PhotoGrid = ({thumbnails, images, imageDetails, continent, gridRef, pictur
 
     if (urlImage && !isModalOpen && urlRef.current) {
         let i = images.find(n => {
-            return n.node.childImageSharp.fluid.originalName.includes(urlImage);
+            return n.node.childImageSharp.parent.relativePath.includes(urlImage);
         });
         if (i) {
             setClickedImage(i);
@@ -66,14 +71,14 @@ const PhotoGrid = ({thumbnails, images, imageDetails, continent, gridRef, pictur
 
     useEffect(() => {
         window.addEventListener("popstate", () => {
-            closeModal();
+            // closeModal();
         });
     }, []);
 
     let findClickedImageAndOpenModal = (e) => {
         let imageName = e.currentTarget.id;
         setClickedImage(images.find(n => {
-            return n.node.childImageSharp.fluid.originalName.includes(imageName);
+            return n.node.childImageSharp.parent.relativePath.includes(imageName);
         }));
         openModal(imageName);
     }
@@ -81,7 +86,7 @@ const PhotoGrid = ({thumbnails, images, imageDetails, continent, gridRef, pictur
     if (pictureFromPin != currentImageSelectedFromPin) {
         setPinImage(pictureFromPin);
         setClickedImage(images.find(n => {
-            return n.node.childImageSharp.fluid.originalName.includes(pictureFromPin);
+            return n.node.childImageSharp.parent.relativePath.includes(pictureFromPin);
         }));
         openModal();
     }
