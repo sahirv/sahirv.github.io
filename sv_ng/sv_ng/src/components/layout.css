@@ -623,9 +623,11 @@ pre tt:after {
 .footericon {
   display: inline-block;
   margin: 1.5rem;
-  font-size: 25px;
+  font-size: 10px;
   text-decoration: none;
   transition: 0.1s ease-in-out;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0f0f0f;
 }
 
 .footericon:hover {
@@ -666,6 +668,7 @@ pre tt:after {
 
 @media only screen and (max-width: 660px) {
   .footericon {
-    font-size: 25px
+    font-size: 10px;
+    margin: 7px;
   }
 }

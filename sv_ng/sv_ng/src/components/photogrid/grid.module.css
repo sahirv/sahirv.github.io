@@ -4,12 +4,12 @@
     grid-row-gap: 3px;
     grid-column-gap: 3px;
     padding-top: 5px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 18%;
+    margin-right: 18%;
 }
 
 .gridItem {
-    padding: 2px;
+    padding: 10px;
     transition: 0.15s ease-in-out;
 }
 

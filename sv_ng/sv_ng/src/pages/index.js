@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import "font-awesome/css/font-awesome.css"
 import * as styles from "./index.module.css"
 /* swithc mobile styles and styles and add style condition if mobile*/
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
 const IndexPage = () => {
@@ -13,30 +13,22 @@ const IndexPage = () => {
   {
     astroImage: file(relativePath: { eq: "milkywaypanorama.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: CONSTRAINED, width: 1000, quality: 80, transformOptions: {fit: COVER, cropFocus: ATTENTION}, aspectRatio: 1.75, placeholder: BLURRED)
       }
     }
     earthImage: file(relativePath: { eq: "tahoe.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: CONSTRAINED, width: 1000, quality: 80, transformOptions: {fit: COVER, cropFocus: ATTENTION}, aspectRatio: 1.75, placeholder: BLURRED)
       }
     }
     blogImage: file(relativePath: { eq: "rb16.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: CONSTRAINED, width: 1000, quality: 80, transformOptions: {fit: COVER, cropFocus: ATTENTION}, aspectRatio: 1.75,placeholder: BLURRED)
       }
     }
     videoImage: file(relativePath: { eq: "atv.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: CONSTRAINED, width: 1000, quality: 80, transformOptions: {fit: COVER, cropFocus: ATTENTION}, aspectRatio: 1.75,placeholder: BLURRED)
       }
     }
   }
@@ -51,7 +43,7 @@ const IndexPage = () => {
         <Link to={"/photography/"}>
           <div className={styles.informationBlock}>
             <div className={styles.astroTitle}>
-              <Img fluid={{...data.earthImage.childImageSharp.fluid, aspectRatio: 1.75}} className={styles.astroTitleImage} imgStyle={{objectFit: "cover"}} fadeIn={true} loading="eager"/>
+              <GatsbyImage image={{...data.earthImage.childImageSharp.gatsbyImageData}} className={styles.astroTitleImage} imgStyle={{objectFit: "cover"}} fadeIn={true} loading="eager"/>
             </div>
             <div className={styles.astroDescription}>
             <div className={styles.astroTitleText}>Photography</div>
@@ -69,7 +61,7 @@ const IndexPage = () => {
             and I'm very lucky to have the priviledge of exploring them. The sky is home to many jewels, and it would be selfish of me not 
             to share them with you. All photos have been taken and processed by myself.</div>
             <div className={styles.astroTitle}>
-              <Img fluid={{...data.astroImage.childImageSharp.fluid, aspectRatio: 1.75}} className={styles.astroTitleImage} imgStyle={{objectFit: "cover"}} fadeIn={true} loading="eager"/>
+              <GatsbyImage image={{...data.astroImage.childImageSharp.gatsbyImageData}} className={styles.astroTitleImage} fadeIn={true} loading="eager"/>
             </div>
           </div>
         </Link>
@@ -77,7 +69,7 @@ const IndexPage = () => {
         <Link to={"/blog/"}>
           <div className={styles.informationBlock}>
             <div className={styles.astroTitle}>
-              <Img fluid={{...data.blogImage.childImageSharp.fluid, aspectRatio: 1.75}} className={styles.astroTitleImage} imgStyle={{objectFit: "cover"}} fadeIn={true} loading="eager"/>
+              <GatsbyImage image={{...data.blogImage.childImageSharp.gatsbyImageData}} className={styles.astroTitleImage}  fadeIn={true} loading="eager"/>
             </div>
             <div className={styles.astroDescription}>
             <div className={styles.astroTitleText}>Blog</div>
@@ -93,7 +85,7 @@ const IndexPage = () => {
             <div className={styles.astroTitleText}>Videography</div>
               Documenting adventures in motion picture. </div>
             <div className={styles.astroTitle}>
-              <Img fluid={{...data.videoImage.childImageSharp.fluid, aspectRatio: 1.75}} className={styles.astroTitleImage} imgStyle={{objectFit: "cover"}} fadeIn={true} loading="eager"/>
+              <GatsbyImage image={{...data.videoImage.childImageSharp.gatsbyImageData}} className={styles.astroTitleImage} fadeIn={true} loading="eager"/>
             </div>
           </div>
         </Link>
@@ -114,22 +106,22 @@ const IndexPage = () => {
       <footer style={{background: 'rgb(248,248,248)', marginTop: '20px'}}>
             <div class="footericon">
               <a  href="http://github.com/sahirv">
-                <i class="fa fa-github"></i>
+                Github
               </a>
             </div>
             <div class="footericon">
               <a  href="http://linkedin.com/in/sahirvellani">
-                <i class="fa fa-linkedin"></i>
+                LinkedIn
               </a>
             </div>
             <div class="footericon">
               <a  href="http://instagram.com/sahirv.photos">
-                <i class="fa fa-instagram"></i>
+                Instagram
               </a>
             </div>
             <div class="footericon">
               <a  href="https://www.youtube.com/channel/UCQbjLiDQUu-gUJ-drcX-8MQ">
-                <i class="fa fa-youtube"></i>
+                YouTube
               </a>
             </div>
       </footer>

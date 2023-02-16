@@ -19,11 +19,6 @@ import * as styles from "./home-background.module.css"
 // `
 
 const SplashImage = ({pageTitle, isMobile}) => {
-  const [mobile, setMobile] = useState(null);
-    useEffect(() => {
-      setMobile(window.innerWidth > 615);
-    }, []);
-
   const data = useStaticQuery(graphql`
     {
       astroImage: file(relativePath: { eq: "olympic-6.jpg" }) {
@@ -53,10 +48,7 @@ const SplashImage = ({pageTitle, isMobile}) => {
   
   let background = pageTitle == "Earth" ? data.earthImage.childImageSharp.gatsbyImageData : data.astroImage.childImageSharp.gatsbyImageData;
   if (isMobile) {
-    background = pageTitle == "Earth" ? data.mobileEarthImage : data.mobileAstroImage;
-  }
-  if (mobile == null) {
-    return <GatsbyImage fluid={undefined} backgroundColor={"#000"} className={styles.background} imgStyle={{objectFit: "cover"}}/>;
+    background = pageTitle == "Earth" ? data.mobileEarthImage.childImageSharp.gatsbyImageData : data.mobileAstroImage.childImageSharp.gatsbyImageData;
   }
   return <GatsbyImage image={background} className={styles.background}/>;
 }

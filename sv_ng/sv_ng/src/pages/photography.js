@@ -21,7 +21,7 @@ const SecondPage = ({location}) => {
                 relativePath
               }
             }
-            gatsbyImageData(layout: FULL_WIDTH, width: 500, quality: 80, transformOptions: {fit: COVER, cropFocus: ATTENTION}, aspectRatio: 1.2)
+            gatsbyImageData(layout: CONSTRAINED, width: 500, quality: 80, transformOptions: {fit: COVER, cropFocus: ATTENTION}, aspectRatio: 1.2, placeholder: BLURRED)
           }
         }
       }
@@ -35,7 +35,7 @@ const SecondPage = ({location}) => {
                 relativePath
               }
             }
-            gatsbyImageData(layout: FULL_WIDTH, width: 2000, quality: 72)
+            gatsbyImageData(layout: CONSTRAINED, width: 3000, quality: 72, placeholder: BLURRED)
           }
         }
       }
@@ -69,8 +69,7 @@ const SecondPage = ({location}) => {
   let continents = data.map_data.nodes[0].map_data;
 
   let urlParams = new URLSearchParams(location.search);
-    let urlImage = urlParams ? urlParams.get('image') : undefined;
-    debugger;
+  let urlImage = urlParams ? urlParams.get('image') : undefined;
 
   const [currentContinent, setCurrentContinent] = React.useState("none");
   const [filterOpen, setFilterOpen] = React.useState(false);
@@ -94,9 +93,11 @@ const SecondPage = ({location}) => {
   <Layout pageTitle="Earth">
     <SEO title="Earth - Travel" />
     <div className={styles.travelNav}>
-        <div className={currentSection == "all" ? styles.travelNavButton + " " + styles.selected : styles.travelNavButton}  onClick={() => setCurrentSection("all")}>All Photos</div>
+        <div className={currentSection == "landscape" ? styles.travelNavButton + " " + styles.selected : styles.travelNavButton} onClick={() => setCurrentSection("landscape")}>Landscape</div>
         <div className={currentSection == "wildlife" ? styles.travelNavButton + " " + styles.selected : styles.travelNavButton} onClick={() => setCurrentSection("wildlife")}>Wildlife</div>
-        <div className={currentSection == "map" ? styles.travelNavButton + " " + styles.selected : styles.travelNavButton} onClick={() => setCurrentSection("map")}>Map </div>
+        <div className={currentSection == "portraits" ? styles.travelNavButton + " " + styles.selected : styles.travelNavButton} onClick={() => setCurrentSection("portraits")}>Portraits</div>
+        <div className={currentSection == "all" ? styles.travelNavButton + " " + styles.selected : styles.travelNavButton}  onClick={() => setCurrentSection("all")}>All Photos</div>
+        {/* <div className={currentSection == "map" ? styles.travelNavButton + " " + styles.selected : styles.travelNavButton} onClick={() => setCurrentSection("map")}>Map </div> */}
     </div>
     <div className={styles.childrenContainer}>
     { currentSection == "map" ?
@@ -114,7 +115,7 @@ const SecondPage = ({location}) => {
         images={data.images.edges} 
         imageDetails={imageDetails}
         pictureFromPin={currentPictureFromPin}
-        isWildlife={currentSection == "wildlife"}></PhotoGrid>
+        imageCategory={currentSection}></PhotoGrid>
     </div>
   </Layout>
   );

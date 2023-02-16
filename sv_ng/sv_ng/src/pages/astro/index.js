@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 import PhotoGrid from "../../components/photogrid/grid"
 import AstroLayout from "./astrolayout"
@@ -17,7 +16,7 @@ const SecondPage = ({location}) => {
                 relativePath
               }
             }
-            gatsbyImageData(layout: FULL_WIDTH, width: 500, quality: 80, transformOptions: {fit: COVER, cropFocus: ATTENTION}, aspectRatio: 1.2)
+            gatsbyImageData(layout: CONSTRAINED, width: 500, quality: 100, transformOptions: {fit: COVER, cropFocus: ATTENTION}, aspectRatio: 1.2)
           }
         }
       }
@@ -31,7 +30,7 @@ const SecondPage = ({location}) => {
                 relativePath
               }
             }
-            gatsbyImageData(layout: FULL_WIDTH, width: 2000, quality: 72)
+            gatsbyImageData(layout: CONSTRAINED, width: 3000, quality: 100)
           }
         }
       }

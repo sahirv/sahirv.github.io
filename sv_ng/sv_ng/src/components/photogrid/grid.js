@@ -6,7 +6,7 @@ import PropTypes from "prop-types"
 import GridImage from "./gridimage"
 import ImageModal from "./imageModal"
 
-const PhotoGrid = ({location, thumbnails, images, imageDetails, continent, gridRef, pictureFromPin, isWildlife}) => {
+const PhotoGrid = ({location, thumbnails, images, imageDetails, continent, gridRef, pictureFromPin, imageCategory}) => {
     // Modal open/close
     const [isModalOpen, setIsModalOpen] = React.useState(false);
     const [clickedImage, setClickedImage] = React.useState(undefined);
@@ -16,22 +16,29 @@ const PhotoGrid = ({location, thumbnails, images, imageDetails, continent, gridR
     let urlRef = useRef(urlImage);
 
     // Show images from all continents if in wildlife tab
-    if (isWildlife) {
+    if (imageCategory) {
         continent = undefined;
     }
-
 
     let closeModal = () => {
         urlParams.delete('image');
         urlRef.current = undefined;
-        setIsModalOpen(false);
-        window.history.back();
+        const open = false;
+        const url = new URL(window.location);
+        url.searchParams.delete('image');
+        window.history.pushState({open}, '', url);
+        setIsModalOpen(open);
     }
+
     let openModal = (image) => {
-        let url = window.location.href + image;
-        setIsModalOpen(true);
-        window.history.pushState({}, "", url);
-        urlRef.current = image;
+        const open = true;
+        const url = new URL(window.location);
+        if (!url.searchParams.has('image')){
+            url.searchParams.set('image', image);
+            window.history.pushState({open}, '', url);
+            urlRef.current = image;
+        }
+        setIsModalOpen(open);
     }
 
     // Generate thumbnails
@@ -46,7 +53,7 @@ const PhotoGrid = ({location, thumbnails, images, imageDetails, continent, gridR
         if (continent 
             && continent == imageDetails[detail].continent 
             || !continent){
-            if (isWildlife && imageDetails[detail].tags && (imageDetails[detail].tags.includes("wildlife")) || !isWildlife){
+            if (imageCategory && imageDetails[detail].tags && (imageDetails[detail].tags.includes(imageCategory)) || imageCategory === "all" || !imageCategory){
                 gridItems.push(
                     <div 
                     className={styles.gridItem}
@@ -70,8 +77,8 @@ const PhotoGrid = ({location, thumbnails, images, imageDetails, continent, gridR
     }
 
     useEffect(() => {
-        window.addEventListener("popstate", () => {
-            // closeModal();
+        window.addEventListener("popstate", (state) => {
+            setIsModalOpen(state.open);
         });
     }, []);
 

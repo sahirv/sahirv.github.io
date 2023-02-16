@@ -44,8 +44,8 @@ const Header = (props) => {
         float: "right",
       }}
     >
-      <NavButton to="/astro/"><AstroIcon /></NavButton>
       <NavButton to="/photography/"><PhotosIcon /></NavButton>
+      <NavButton to="/astro/"><AstroIcon /></NavButton>
       <NavButton to="/videos/"><FilmIcon /></NavButton>
       <NavButton to="/blog/"><TechIcon /></NavButton>
     </div>
