@@ -21,7 +21,7 @@ const SecondPage = ({location}) => {
                 relativePath
               }
             }
-            gatsbyImageData(layout: CONSTRAINED, width: 500, quality: 80, transformOptions: {fit: COVER, cropFocus: ATTENTION}, aspectRatio: 1.2, placeholder: BLURRED)
+            gatsbyImageData(layout: CONSTRAINED, width: 500, quality: 80, transformOptions: {fit: COVER, cropFocus: CENTER}, aspectRatio: 1.2, placeholder: BLURRED)
           }
         }
       }

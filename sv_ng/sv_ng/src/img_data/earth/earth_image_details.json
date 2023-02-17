@@ -1,6 +1,46 @@
 {
     "earth_image_details": [
         {
+            "description": "Santa Barabara from the belltower.",
+            "image": "santabarbara.jpg",
+            "continent": "north america",
+            "title": "Santa Barbara",
+            "location": "Santa Barbara, CA",
+            "x": "75.2",
+            "y": "36",
+            "tags": ["landscape"]
+        },
+        {
+            "description": "",
+            "image": "bigsur.jpg",
+            "continent": "north america",
+            "title": "Big Sur",
+            "location": "Big Sur, CA",
+            "x": "75.2",
+            "y": "36",
+            "tags": ["landscape"]
+        },
+        {
+            "description": "Skyline from Griffith Observatory.",
+            "image": "la-skyline.jpg",
+            "continent": "north america",
+            "title": "Los Angeles Skyline",
+            "location": "Los Angeles, CA",
+            "x": "75.2",
+            "y": "36",
+            "tags": ["landscape"]
+        },
+        {
+            "description": "Elephant seals lounging at the beach.",
+            "image": "elephantseal.jpg",
+            "continent": "north america",
+            "title": "Table Mountain",
+            "location": "Big Sur, CA",
+            "x": "75.2",
+            "y": "36",
+            "tags": ["wildlife"]
+        },
+        {
             "description": "A reflection of Table mountain on the Chain Lakes loop trailhead.",
             "image": "chainlakes.jpg",
             "continent": "north america",
@@ -102,6 +142,36 @@
         },
         {
             "description": "",
+            "image": "woodpecker.jpg",
+            "continent": "north america",
+            "title": "Woodpecker",
+            "location": "Mississauga, ON",
+            "x": "75.2",
+            "y": "36",
+            "tags": ["wildlife"]
+        },
+        {
+            "description": "",
+            "image": "black bird.jpg",
+            "continent": "north america",
+            "title": "Black Bird",
+            "location": "Mississauga, ON",
+            "x": "75.2",
+            "y": "36",
+            "tags": ["wildlife"]
+        },
+        {
+            "description": "",
+            "image": "chonkybird.jpg",
+            "continent": "north america",
+            "title": "Chonky Bird",
+            "location": "Mississauga, ON",
+            "x": "75.2",
+            "y": "36",
+            "tags": ["wildlife"]
+        },
+        {
+            "description": "",
             "image": "msh.jpg",
             "continent": "north america",
             "title": "Riverside",
@@ -112,7 +182,7 @@
         },
         {
             "description": "",
-            "image": "rainier-2.jpg",
+            "image": "rainier-sunset.jpg",
             "continent": "north america",
             "title": "Riverside",
             "location": "Leavenworth, WA",
@@ -462,7 +532,7 @@
         },
         {
             "description": "",
-            "image": "hoodblueheron.jpg",
+            "image": "hoodblueheron copy.jpg",
             "continent": "north america",
             "title": "Blue Heron",
             "location": "Trinity Lake, OR",

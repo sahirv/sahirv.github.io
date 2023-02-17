@@ -225,6 +225,42 @@
             ],
             "link": "https://www.nasa.gov/feature/goddard/2017/messier-51-the-whirlpool-galaxy",
             "id": 15
+        },
+        {
+            "image": "andromeda.png",
+            "title": "Andromeda Galaxy",
+            "description": "One of the few objects OUTSIDE of our own galaxy that can be seen with the naked eye.",
+            "equipment": [
+                "Canon 24-105 f4 L @ 105mm",
+                "Canon EOS R",
+                "Sky-Watcher Star Adventurer"
+            ],
+            "link": "https://www.nasa.gov/feature/goddard/2017/messier-31-the-andromeda-galaxy",
+            "id": 16
+        },
+        {
+            "image": "cometztf.png",
+            "title": "Coment C2022 E3 ZTF",
+            "description": "Captured a glimpse of the green comet as it whizzed by Earth. Composite of 2 images.",
+            "equipment": [
+                "Canon 24-105 f4 L @ 105mm",
+                "Canon EOS R",
+                "Sky-Watcher Star Adventurer"
+            ],
+            "link": "https://science.nasa.gov/comet-2022-e3-ztf",
+            "id": 17
+        },
+        {
+            "image": "lagoon.png",
+            "title": "Lagoon and Triffid Nebulae",
+            "description": "Deep in the core of the milky way, these nebulae with vibrant colours can be seen clearly with a camera and lens.",
+            "equipment": [
+                "Canon 24-105 f4 L @ 105mm",
+                "Canon EOS R",
+                "Sky-Watcher Star Adventurer"
+            ],
+            "link": "https://en.wikipedia.org/wiki/Lagoon_Nebula",
+            "id": 18
         }
     ]
 }
