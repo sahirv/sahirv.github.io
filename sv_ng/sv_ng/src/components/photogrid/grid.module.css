@@ -4,12 +4,12 @@
     grid-row-gap: 3px;
     grid-column-gap: 3px;
     padding-top: 5px;
-    margin-left: 18%;
-    margin-right: 18%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .gridItem {
-    padding: 10px;
+    padding: 2px;
     transition: 0.15s ease-in-out;
 }
 
@@ -88,9 +88,6 @@
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
 }
 
-.imageDetails::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
-}
 
 p a {
     color: rgb(20, 109, 211);
@@ -127,6 +124,9 @@ p a {
         margin-left: 10px;
         margin-right: 10px;
     }
+    .showDetails {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -152,7 +152,7 @@ p a {
         margin-left: 0px;
         bottom: 50px;
         z-index: 5;
-        width: 92%;
+        width: 93%;
         padding-right: 5px;
         overflow: hidden;
         height: 5%;
@@ -216,4 +216,85 @@ p a {
       bottom: 50px;
       overflow: auto;
     }
+}
+
+@media screen and (min-width: 660px) {
+    
+.imageContainer {
+    height: 100%;
+    width: 100%;
+    top: 70px;
+    margin-bottom: auto;
+    background-color: rgb(12, 12, 12);
+    margin-top: auto;
+}
+
+.modal {
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    right: 70px;
+    bottom: 70px;
+    background-color:rgba(250, 250, 250);
+    border: none;
+    overflow: hidden;
+}
+
+.modal:focus {
+    outline: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(10, 10, 10, 0.75);
+    z-index: 3;
+    border: none;
+}
+.showDetails {
+    font-size: 30px;
+    text-align: center;
+    margin-top: -0.5%;
+}
+.imageDetails {
+    z-index: 4;
+    width: 100%;
+    padding-right: 5px;
+    overflow: hidden;
+    height: 30%;
+    padding-bottom: 20px;
+    position: relative;
+    background-color: rgba(5, 5, 5, 0.9);
+    padding-left: 20px;
+    transform: translate(0, -20%);
+    margin-left: 0px;
+    transition: 0.15s ease-in-out;
+    color: rgba(245, 245, 245, 0.9);
+}
+
+.moreTextIndicator {
+    position: absolute;
+    margin-left: 0px;
+    bottom: 0;
+    z-index: 5;
+    width: 100%;
+    padding-right: 5px;
+    overflow: hidden;
+    height: 3%;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    pointer-events: none;
+    display: none;
+}
+
+
+.imageDetails:hover{
+    background-color: rgba(245, 245, 245, 0.9);
+    color: rgba(5, 5, 5, 0.9);
+    transform: translate(0, -100%);
+    transition: 0.15s ease-in-out;
+    overflow: scroll
+}
 }

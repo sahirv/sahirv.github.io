@@ -22,6 +22,7 @@ const ImageModal = ({image, imageDetails, isModalOpen, onClose}) => {
             </div>
             {detail ? 
                 <div className={styles.imageDetails}>
+                    <div className={styles.showDetails}>...</div>
                     <h4>{detail.title}</h4>
                     <h5>{detail.location}</h5>
                     <p className={styles.description}>{detail.description}</p>

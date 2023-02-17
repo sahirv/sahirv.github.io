@@ -261,6 +261,18 @@
             ],
             "link": "https://en.wikipedia.org/wiki/Lagoon_Nebula",
             "id": 18
+        },
+        {
+            "image": "mw-2.jpg",
+            "title": "Milky Way",
+            "description": "Milky way from Olympic National Park. Rho Ophiuchi complex can faintly be seen to the right and the Olympic range below.",
+            "equipment": [
+                "Rokinon 14mm",
+                "Canon EOS R",
+                "Sky-Watcher Star Adventurer"
+            ],
+            "link": "https://imagine.gsfc.nasa.gov/science/objects/milkyway1.html",
+            "id": 19
         }
     ]
 }
