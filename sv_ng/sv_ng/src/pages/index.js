@@ -2,7 +2,6 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import "font-awesome/css/font-awesome.css"
 import * as styles from "./index.module.css"
 /* swithc mobile styles and styles and add style condition if mobile*/
 import { GatsbyImage } from "gatsby-plugin-image"

@@ -9,16 +9,16 @@
 }
 
 .maintitle {
-    margin-left: 9.5%;
+    margin-left: 50vw;
     padding-left: 20px;
-    margin-right: 3rem;
+    margin-right: 3vw;
     font-size: 6.5rem;
     transition: 0.15s ease-in-out;
     transform-origin: top;
     top: 0.7rem;
     color: rgb(236, 236, 236);
     font-weight: 30;
-    margin-top: 35rem;
+    margin-top: 78vh;
     margin-bottom: 8.75rem;
 }
 

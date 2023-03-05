@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
 import PhotoGrid from "../components/photogrid/grid"
 
-import Map from "../components/map/map"
+// import Map from "../components/map/map"
 
 const SecondPage = ({location}) => {
   const data = useStaticQuery(graphql`
@@ -100,13 +100,13 @@ const SecondPage = ({location}) => {
         {/* <div className={currentSection == "map" ? styles.travelNavButton + " " + styles.selected : styles.travelNavButton} onClick={() => setCurrentSection("map")}>Map </div> */}
     </div>
     <div className={styles.childrenContainer}>
-    { currentSection == "map" ?
+    {/* { currentSection == "map" ?
       <div>
         <div className={styles.earthDescription}>This page is for me as much as it is for you. Here I present to you the pictures I've taken of everything that we can find on our own wonderful planet. I'm not a photographer by any means, but I'm trying to learn. Some of the pictures here are taken with smartphone cameras, and others with a DSLR. The map is there for me to document where I've been; ultimately the goal is to cover the whole thing with pins. Feel free to zoom in and click on a pin to see what I took a picture of at that spot on Earth. If you just want to see photos, check out the Wildlife and Photos tabs.</div>
         <div className={styles.continentContainer}>
           <Map continents={continents} onContinentClick={continentClickCallback} imageDetails={imageDetails} selectImageCallback={selectImageCallback}/>
         </div>
-      </div> : <></> }
+      </div> : <></> } */}
       <PhotoGrid
         location={location}
         gridRef={gridRef}

@@ -1,6 +1,47 @@
 {
     "earth_image_details": [
         {
+            "image": "228A1774.jpg",
+            "title": "Wandering Among Birches",
+            "description": "A group of birch trees found in Cougar Mountain, WA.",
+            "continent": "North America",
+            "location": "Seattle, WA",
+            "tags": [
+                "landscape",
+                "portrait"
+            ]
+        },
+        {
+            "image": "228A1778.jpg",
+            "title": "Spring Moss",
+            "description": "A foggy and rainy evening in Cougar Mountain, WA.",
+            "continent": "North America",
+            "location": "Seattle, WA",
+            "tags": [
+                "landscape"
+            ]
+        },
+        {
+            "image": "228A1670.jpg",
+            "title": "Ancient Lakes",
+            "description": "On the Eastern side of the Cascade range in Washington lies a trove of interesting geological features. This includes the Ancient lakes trail, which takes one into a gorge to small lake near the Columbia river.",
+            "continent": "North America",
+            "location": "Quincy, WA",
+            "tags": [
+                "landscape"
+            ]
+        },
+        {
+            "image": "vancouver_ship.jpg",
+            "title": "Lonsdale Quay",
+            "description": "Small portion of the vancouver skyline with a container ship seen from the Lonsdale Quay market in North Vancouver.",
+            "continent": "North America",
+            "location": "North Vancouver, BC",
+            "tags": [
+                "landscape"
+            ]
+        },
+        {
             "description": "Santa Barabara from the belltower.",
             "image": "santabarbara.jpg",
             "continent": "north america",
@@ -8,7 +49,9 @@
             "location": "Santa Barbara, CA",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "",
@@ -18,7 +61,9 @@
             "location": "Big Sur, CA",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "Skyline from Griffith Observatory.",
@@ -28,7 +73,9 @@
             "location": "Los Angeles, CA",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "Elephant seals lounging at the beach.",
@@ -38,7 +85,9 @@
             "location": "Big Sur, CA",
             "x": "75.2",
             "y": "36",
-            "tags": ["wildlife"]
+            "tags": [
+                "wildlife"
+            ]
         },
         {
             "description": "A reflection of Table mountain on the Chain Lakes loop trailhead.",
@@ -48,7 +97,9 @@
             "location": "North Cascades, WA",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "Needs no description; the Grand Canyon.",
@@ -58,7 +109,9 @@
             "location": "Grand Canyon South Rim, AZ",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "A pitstop on the road to Hana.",
@@ -68,7 +121,9 @@
             "location": "Keanae, HI",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "The famed sunrise from the summit of the sacred mountain Haleakala in Maui.",
@@ -78,7 +133,9 @@
             "location": "Haleakala, HI",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "From the sliding sands trail atop Haleakala. The landscape resembles that of Mordor.",
@@ -88,7 +145,9 @@
             "location": "Haleakala, HI",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "Green tapestry of old growth trees in the Hoh Rainforst in the heart of Olympic National park.",
@@ -98,7 +157,9 @@
             "location": "Hoh Rainforest, WA",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "",
@@ -108,7 +169,9 @@
             "location": "Leavenworth, WA",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "",
@@ -118,7 +181,9 @@
             "location": "Leavenworth, WA",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "",
@@ -128,7 +193,9 @@
             "location": "Leavenworth, WA",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "",
@@ -138,7 +205,9 @@
             "location": "Leavenworth, WA",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "",
@@ -148,7 +217,9 @@
             "location": "Mississauga, ON",
             "x": "75.2",
             "y": "36",
-            "tags": ["wildlife"]
+            "tags": [
+                "wildlife"
+            ]
         },
         {
             "description": "",
@@ -158,7 +229,9 @@
             "location": "Mississauga, ON",
             "x": "75.2",
             "y": "36",
-            "tags": ["wildlife"]
+            "tags": [
+                "wildlife"
+            ]
         },
         {
             "description": "",
@@ -168,7 +241,9 @@
             "location": "Mississauga, ON",
             "x": "75.2",
             "y": "36",
-            "tags": ["wildlife"]
+            "tags": [
+                "wildlife"
+            ]
         },
         {
             "description": "",
@@ -178,7 +253,9 @@
             "location": "Leavenworth, WA",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "",
@@ -188,7 +265,9 @@
             "location": "Leavenworth, WA",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "",
@@ -198,7 +277,9 @@
             "location": "Leavenworth, WA",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "",
@@ -208,7 +289,9 @@
             "location": "Leavenworth, WA",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "",
@@ -218,7 +301,9 @@
             "location": "Leavenworth, WA",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "Cows along Hwy 2 ahead of North Cascades Natl Park.",
@@ -228,7 +313,9 @@
             "location": "US HWY 2, WA",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "",
@@ -238,7 +325,9 @@
             "location": "Lake Diablo, WA",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "",
@@ -248,7 +337,9 @@
             "location": "Ruby Beach, OR",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "",
@@ -258,7 +349,9 @@
             "location": "Florence, OR",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "",
@@ -268,7 +361,9 @@
             "location": "Florence, OR",
             "x": "75.2",
             "y": "36",
-            "tags": ["people"]
+            "tags": [
+                "people"
+            ]
         },
         {
             "description": "",
@@ -278,7 +373,9 @@
             "location": "Windsor, UK",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "",
@@ -288,7 +385,9 @@
             "location": "Windsor, UK",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "ATVing on the Oregon sand dunes.",
@@ -298,7 +397,9 @@
             "location": "Florence, OR",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "",
@@ -308,7 +409,9 @@
             "location": "San Francisco, CA",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "",
@@ -318,7 +421,9 @@
             "location": "Windsor, UK",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "",
@@ -328,7 +433,9 @@
             "location": "Mt. Diablo, CA",
             "x": "75.2",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "",
@@ -338,7 +445,9 @@
             "location": "Tolmie Peak, WA",
             "x": "76",
             "y": "34",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "Mount Vesuvius can faintly be seen towering above the ocean from Sorrento, Italy.",
@@ -348,7 +457,9 @@
             "location": "Sorrento, Italy",
             "x": "233",
             "y": "43",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "Oracle Park, formerly known as AT&T Park (and a bunch of other things before that). On this particular day, the home team, San Francisco Giants were playing the Chicago Cubs. It's an absolutely stunning venue, with views of the San Francisco bay and Oakland. ",
@@ -358,7 +469,9 @@
             "location": "San Francisco, USA",
             "x": "67",
             "y": "44",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "I took a day trip to Oxford University in the fall of 2017. It was quite amazing to see the historic architecture, trace the steps of some of humanity's finest thinkers and artists, and eat shepherd's pie at The Eagle and Child. Yes, the very same pub that the author of the Lord of the Rings, J. R. R. Tolkien, used as a weekly meeting place.",
@@ -368,7 +481,9 @@
             "location": "Oxford, UK",
             "x": "215",
             "y": "25",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "Even in the middle of a heatwave, I could stay perched on top of Monte Solaro for hours and enjoy the views of Capri and Sorrento. Italy has so much to offer, and Capri is definitely a must for tourists. Even the journey to Monte Solaro is quite exhilerating, let alone the views that you're awarded with in the end. The Funicular cable car and buses that traverse the island offer an expereince unlike no other. Kudos to the drivers for being able to navigate tight roads and through tricky traffic!",
@@ -378,7 +493,9 @@
             "location": "Capri, Italy",
             "x": "232",
             "y": "43",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "A hot air balloon begins to take flight over Maasai Mara. Game drives normally happen around sunrise and sunset. It is at those times when temperatures are cool enough for animals to roam about the plains freely, while also being bright enough for us to see them. Safaris are almost therapeutic to me. It feels unreal to stand in the safari vehicle with the top open, with the fresh wind hitting my face as I look out for some of the world's most magnificent creatures. At that moment there is nothing but peace and happiness. I hope humans are able to experience and preserve the natural beauty of East Africa until the end of time.",
@@ -388,7 +505,9 @@
             "location": "Maasai Mara National Reserve, Kenya",
             "x": "262",
             "y": "103",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "A herd of Antellopes (or perhaps Gazelles) congregate during sunset at Maasai Mara. As the day ends, I feel nothing but a sense of complete peace and freedom.",
@@ -398,7 +517,9 @@
             "location": "Maasai Mara National Reserve, Kenya",
             "x": "261",
             "y": "104",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "One of my favourite places in the world is the Kenyan South Coast. I got up a bit early to take a morning stroll and enjoy the sun rising over the Indian Ocean. A few dhows can be seen near the horizon, resting peacefully until they take tourists over vibrant coral reefs later on in the day.",
@@ -408,7 +529,9 @@
             "location": "Diani Beach, Kenya",
             "x": "267",
             "y": "105",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "Despite the blistering heat, we decided to trek a part of the Path of Gods. It is safe to say that the name does not exaggerate. It was a short bus ride from our Airbnb in San Lazzaro, to the trailhead in Bomerano. From there, there was nothing but stunning views of the Amalfi coast. Equally stunning was the presence of water fountains carved into the side of the mountain, along with seemingly old houses and churches that passed the test of time.",
@@ -418,7 +541,9 @@
             "location": "Amalfi Coast, Italy",
             "x": "233.5",
             "y": "43.5",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "Mt. Si, in all its glory, as seen from my first hike in the Pacific North-West. Without a doubt, one of the most beautiful places in the world.",
@@ -428,7 +553,9 @@
             "location": "Snoqualmie Valley, USA",
             "x": "78",
             "y": "32",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "Burj Al Arab emerging behind the Souk Madinat, as a man navigates an \"Abra\" through the Souk's waterways. This picture depicts a great microcosm of Dubai as it is today. A newly defined city that boasts state of the art architecture and unimaginable luxury, while striving to maintain its Islamic and Arabian roots.",
@@ -438,7 +565,9 @@
             "location": "Dubai, UAE",
             "x": "277",
             "y": "64",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "For a few minutes during dusk, the entire beach was orange. Mountains surrounding the lake can be seen in the distance, casting a silhouette against the sky. ",
@@ -448,7 +577,9 @@
             "location": "Lake Tahoe, USA",
             "x": "73",
             "y": "41",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "Anfield Stadium, Liverpool. I took an exchange term at the University of Sheffield in Fall 2017 so I'd have an excuse to conduct a pilgrimage to Liverpool FC's legendary stadium. This is one of the few pictures I took during my visit. LFC beat Huddersfield 3-0.",
@@ -458,7 +589,9 @@
             "location": "Liverpool, UK",
             "x": "212.5",
             "y": "23",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "Yosemite National Park truly is the best that California has to offer. It is home to the iconic El Capitain and Half Dome, towering and ancient sequoia trees, and tens of waterfalls - including Yosemite falls, which drop a whopping 739m. It's almost like finding yourself on a foreign planet. The granite cliffs stand apparent in midst of giant sequioa groves and lush meadows. Finding yourself on top of one of them is a must, as you're treated to incredible vistas unlike any that the rest of the world has to offer.",
@@ -468,7 +601,9 @@
             "location": "Yosemite National Park, USA",
             "x": "70",
             "y": "42",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "",
@@ -478,7 +613,9 @@
             "location": "Trinity Lake, OR",
             "x": "75.8",
             "y": "36.2",
-            "tags": ["wildlife"]
+            "tags": [
+                "wildlife"
+            ]
         },
         {
             "description": "",
@@ -488,7 +625,9 @@
             "location": "Trinity Lake, OR",
             "x": "75.6",
             "y": "36.2",
-            "tags": ["wildlife"]
+            "tags": [
+                "wildlife"
+            ]
         },
         {
             "description": "",
@@ -498,7 +637,9 @@
             "location": "",
             "x": "75",
             "y": "31.7",
-            "tags": ["wildlife"]
+            "tags": [
+                "wildlife"
+            ]
         },
         {
             "description": "",
@@ -508,7 +649,9 @@
             "location": "Olympic Peninsula, WA",
             "x": "73.2",
             "y": "32",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "",
@@ -518,7 +661,9 @@
             "location": "Trinity Lake, OR",
             "x": "75.5",
             "y": "36",
-            "tags": ["wildlife"]
+            "tags": [
+                "wildlife"
+            ]
         },
         {
             "description": "",
@@ -528,7 +673,9 @@
             "location": "Trinity Lake, OR",
             "x": "75",
             "y": "36",
-            "tags": ["landscape"]
+            "tags": [
+                "landscape"
+            ]
         },
         {
             "description": "",
@@ -538,7 +685,9 @@
             "location": "Trinity Lake, OR",
             "x": "75.2",
             "y": "36",
-            "tags": ["wildlife"]
+            "tags": [
+                "wildlife"
+            ]
         }
     ]
 }
