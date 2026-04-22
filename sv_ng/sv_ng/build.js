@@ -1,6 +1,7 @@
 /**
  * Static site builder for sahirvellani.com.
- * Reads templates and JSON data from src/, writes the rendered site to public/.
+ * Reads templates and JSON data from src/, writes the rendered site to <repo>/docs/
+ * (GitHub Pages is configured to serve from main / docs).
  * Uses only the Node standard library (no third-party deps).
  */
 'use strict';
@@ -9,7 +10,7 @@ const fs = require('fs');
 const path = require('path');
 
 const SRC = path.join(__dirname, 'src');
-const OUT = path.join(__dirname, 'public');
+const OUT = path.resolve(__dirname, '..', '..', 'docs');
 
 // ---------------- Helpers ----------------
 

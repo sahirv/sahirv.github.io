@@ -54,9 +54,8 @@ typings/
 # dotenv environment variable files
 .env*
 
-# gatsby files
+# build output (now lives at <repo>/docs and IS committed)
 .cache/
-public/
 
 # Mac files
 .DS_Store

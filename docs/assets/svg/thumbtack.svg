@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   id="svg2"
+   version="1.1"
+   style="position: absolute; top: 0; left: 0; height: 85px; width: 60px;">
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="transform: translate(300px, 100px) scale(0.2)">
+    <rect
+       style="fill:#9b9b9b;fill-opacity:1;fill-rule:evenodd;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="rect3348"
+       width="3"
+       height="50"
+       x="34"
+       y="40" />
+    <ellipse
+       style="opacity:1;fill:#eb1515;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path3338"
+       cx="36"
+       cy="40"
+       rx="20"
+       ry="20" />
+  </g>
+</svg>
