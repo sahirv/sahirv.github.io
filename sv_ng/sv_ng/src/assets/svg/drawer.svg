@@ -1,0 +1,19 @@
+<!-- Made with Inkscape -->
+<svg>
+  <g id="layer1">
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 4.8823464,4.1102541 44.2857196,0 0,2.57142 -44.2857196,0 z"
+       id="rect_top"
+       />
+    <path
+       id="rect_middle"
+       d="m 4.9966364,13.938824 44.2857196,0 0,2.57142 -44.2857196,0 z"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 4.9966364,23.338824 44.2857196,0 0,2.57142 -44.2857196,0 z"
+       id="rect_bottom" />
+  </g>
+</svg>
