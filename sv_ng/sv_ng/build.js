@@ -257,18 +257,13 @@ function buildBlogIndex() {
 // Photography page (earth photos with section tabs).
 function buildPhotography() {
   const json = JSON.parse(read(path.join(SRC, 'data', 'earth.json')));
-  // Normalize tag "people" -> "portrait" so the single people-tagged photo is reachable via the Portraits tab.
-  const items = json.earth_image_details.map((it) => {
-    const tags = (it.tags || []).map((t) => (t === 'people' ? 'portrait' : t));
-    return { ...it, tags };
-  });
+  const items = json.earth_image_details;
 
   const grid = items
     .map((it) => {
-      const tagAttr = (it.tags || []).join(' ');
       const thumbSrc = `/images/earth/${encodeURI(thumbName(it.image))}`;
       const alt = it.title || it.location || it.image;
-      return `<button class="grid-item" type="button" data-image="${escAttr(it.image)}" data-tags="${escAttr(tagAttr)}" aria-label="${escAttr(alt)}">
+      return `<button class="grid-item" type="button" data-image="${escAttr(it.image)}" aria-label="${escAttr(alt)}">
         <img src="${escAttr(thumbSrc)}" alt="${escAttr(alt)}" loading="lazy" decoding="async" />
       </button>`;
     })

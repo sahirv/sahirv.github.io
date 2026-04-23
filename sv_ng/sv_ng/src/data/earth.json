@@ -1,6 +1,76 @@
 {
   "earth_image_details": [
     {
+      "image": "228A7298.jpg",
+      "title": "",
+      "description": "",
+      "continent": "North America",
+      "location": "The Enchantments, Washington",
+      "tags": [
+        "landscape"
+      ]
+    },
+    {
+      "image": "228A7314-Pano.jpg",
+      "title": "",
+      "description": "",
+      "continent": "North America",
+      "location": "The Enchantments, Washington",
+      "tags": [
+        "landscape"
+      ]
+    },
+    {
+      "image": "228A7316.jpg",
+      "title": "",
+      "description": "",
+      "continent": "North America",
+      "location": "The Enchantments, Washington",
+      "tags": [
+        "landscape"
+      ]
+    },
+    {
+      "image": "228A7320-3.jpg",
+      "title": "",
+      "description": "",
+      "continent": "North America",
+      "location": "The Enchantments, Washington",
+      "tags": [
+        "landscape"
+      ]
+    },
+    {
+      "image": "228A9828-Enhanced-NR.jpg",
+      "title": "",
+      "description": "",
+      "continent": "North America",
+      "location": "Bellevue, Washington",
+      "tags": [
+        "landscape"
+      ]
+    },
+    {
+      "image": "228A9904-Enhanced-NR.jpg",
+      "title": "",
+      "description": "",
+      "continent": "North America",
+      "location": "Bellevue, Washington",
+      "tags": [
+        "landscape"
+      ]
+    },
+    {
+      "image": "228A9905-Enhanced-NR.jpg",
+      "title": "",
+      "description": "",
+      "continent": "North America",
+      "location": "Bellevue, Washington",
+      "tags": [
+        "landscape"
+      ]
+    },
+    {
       "image": "228A4502.jpg",
       "title": "",
       "description": "",
@@ -348,166 +418,6 @@
       "location": "Guatemala",
       "tags": [
         "landscape"
-      ]
-    },
-    {
-      "image": "simranfarhan2.jpg",
-      "title": "",
-      "description": "",
-      "continent": "",
-      "location": "",
-      "tags": [
-        "portrait"
-      ]
-    },
-    {
-      "image": "simranfarhan.jpg",
-      "title": "",
-      "description": "",
-      "continent": "",
-      "location": "",
-      "tags": [
-        "portrait"
-      ]
-    },
-    {
-      "image": "sjd4.jpg",
-      "title": "",
-      "description": "",
-      "continent": "",
-      "location": "",
-      "tags": [
-        "portrait"
-      ]
-    },
-    {
-      "image": "sjd1.jpg",
-      "title": "",
-      "description": "",
-      "continent": "",
-      "location": "",
-      "tags": [
-        "portrait"
-      ]
-    },
-    {
-      "image": "sjd3.jpg",
-      "title": "",
-      "description": "",
-      "continent": "",
-      "location": "",
-      "tags": [
-        "portrait"
-      ]
-    },
-    {
-      "image": "sjd2.jpg",
-      "title": "",
-      "description": "",
-      "continent": "",
-      "location": "",
-      "tags": [
-        "portrait"
-      ]
-    },
-    {
-      "image": "mn2.jpg",
-      "title": "",
-      "description": "",
-      "continent": "",
-      "location": "",
-      "tags": [
-        "portrait"
-      ]
-    },
-    {
-      "image": "mn1.jpg",
-      "title": "",
-      "description": "",
-      "continent": "",
-      "location": "",
-      "tags": [
-        "portrait"
-      ]
-    },
-    {
-      "image": "n2.jpg",
-      "title": "",
-      "description": "",
-      "continent": "",
-      "location": "",
-      "tags": [
-        "portrait"
-      ]
-    },
-    {
-      "image": "s1.jpg",
-      "title": "",
-      "description": "",
-      "continent": "",
-      "location": "",
-      "tags": [
-        "portrait"
-      ]
-    },
-    {
-      "image": "nameerahtrain.jpg",
-      "title": "",
-      "description": "",
-      "continent": "",
-      "location": "",
-      "tags": [
-        "portrait"
-      ]
-    },
-    {
-      "image": "as-4.jpg",
-      "title": "",
-      "description": "",
-      "continent": "",
-      "location": "",
-      "tags": [
-        "portrait"
-      ]
-    },
-    {
-      "image": "as-2.jpg",
-      "title": "",
-      "description": "",
-      "continent": "",
-      "location": "",
-      "tags": [
-        "portrait"
-      ]
-    },
-    {
-      "image": "as-3.jpg",
-      "title": "",
-      "description": "",
-      "continent": "",
-      "location": "",
-      "tags": [
-        "portrait"
-      ]
-    },
-    {
-      "image": "as-5.jpg",
-      "title": "",
-      "description": "",
-      "continent": "",
-      "location": "",
-      "tags": [
-        "portrait"
-      ]
-    },
-    {
-      "image": "as-1.jpg",
-      "title": "",
-      "description": "",
-      "continent": "",
-      "location": "",
-      "tags": [
-        "portrait"
       ]
     },
     {
@@ -930,18 +840,6 @@
       "y": "36",
       "tags": [
         "landscape"
-      ]
-    },
-    {
-      "description": "",
-      "image": "atv1.jpg",
-      "continent": "north america",
-      "title": "Going for a Ride",
-      "location": "Florence, OR",
-      "x": "75.2",
-      "y": "36",
-      "tags": [
-        "people"
       ]
     },
     {

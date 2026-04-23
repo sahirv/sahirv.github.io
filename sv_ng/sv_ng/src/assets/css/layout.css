@@ -5,7 +5,10 @@
   left: 0;
   right: 0;
   height: 55px;
-  background: rgba(10, 10, 10, 0.98);
+  background: rgba(20, 20, 22, 0.65);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   z-index: 50;
   display: flex;
   align-items: center;
@@ -72,7 +75,12 @@
 }
 .drawer[hidden] { display: none; }
 .drawer-nav {
-  background: rgba(28, 28, 28, 0.98);
+  background: rgba(20, 20, 22, 0.65);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
   padding: 10px 0 20px 0;
 }
 .drawer-nav a {
@@ -83,7 +91,7 @@
   font-size: 22px;
   text-decoration: none;
 }
-.drawer-nav a img { height: 26px; width: auto; margin-right: 24px; filter: invert(1); }
+.drawer-nav a img { height: 26px; width: auto; margin-right: 24px; }
 .drawer-nav a.active { color: #ffffff; font-weight: 500; }
 .drawer-overlay {
   flex: 1;
