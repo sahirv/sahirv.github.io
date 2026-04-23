@@ -6,7 +6,9 @@
   "license": "MIT",
   "scripts": {
     "build": "node build.js",
-    "clean": "node -e \"require('fs').rmSync('public', {recursive: true, force: true})\"",
     "serve": "node serve.js"
+  },
+  "dependencies": {
+    "sharp": "^0.32.6"
   }
 }

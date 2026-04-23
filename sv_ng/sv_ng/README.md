@@ -23,14 +23,21 @@ Personal website — plain HTML, CSS, and JavaScript. Built with a tiny Node scr
 
 ## Develop
 
-Requires Node 18+. No `npm install` step is needed — there are no dependencies.
+Requires Node 18.17+ (for the `sharp` thumbnail library).
 
 ```sh
-node build.js   # writes ../../docs (the repo's docs/ folder)
-node serve.js   # serves docs/ on http://localhost:8080
+npm install      # one time, installs sharp
+node build.js    # writes ../../docs (the repo's docs/ folder)
+node serve.js    # serves docs/ on http://localhost:8080
 ```
 
 `npm run build` and `npm run serve` are equivalent.
+
+The build script generates a low-resolution `<name>.thumb.jpg` (~700px wide,
+~60 KB) next to every image in `src/images/earth/` and `src/images/astro/`.
+The photography and astro grids reference these thumbs; the modal viewer loads
+the full-resolution original on demand. Image processing is incremental — only
+new or changed source images are reprocessed.
 
 ## Adding a photo
 

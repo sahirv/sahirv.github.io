@@ -2,15 +2,28 @@
  * Static site builder for sahirvellani.com.
  * Reads templates and JSON data from src/, writes the rendered site to <repo>/docs/
  * (GitHub Pages is configured to serve from main / docs).
- * Uses only the Node standard library (no third-party deps).
+ *
+ * Uses Node std lib + `sharp` for thumbnail generation. Image processing is
+ * incremental: full-res images and per-image .thumb.jpg variants are only
+ * (re)generated when missing or when the source mtime is newer than the output.
  */
 'use strict';
 
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
+const sharp = require('sharp');
 
 const SRC = path.join(__dirname, 'src');
 const OUT = path.resolve(__dirname, '..', '..', 'docs');
+
+// Thumbnail config. Only applied to images under src/images/<dir> where <dir>
+// is in THUMB_DIRS. The thumbnail is written as <name>.thumb.jpg next to the
+// original.
+const THUMB_DIRS = new Set(['earth', 'astro']);
+const THUMB_WIDTH = 700;
+const THUMB_QUALITY = 78;
+const THUMB_SUFFIX = '.thumb.jpg';
 
 // ---------------- Helpers ----------------
 
@@ -40,6 +53,10 @@ function copyFile(src, dest) {
   fs.copyFileSync(src, dest);
 }
 
+function rmIfExists(p) {
+  if (fs.existsSync(p)) fs.rmSync(p, { recursive: true, force: true });
+}
+
 function escHtml(s) {
   return String(s == null ? '' : s)
     .replace(/&/g, '&amp;')
@@ -59,6 +76,100 @@ function fillTemplate(tpl, vars) {
       return vars[key] == null ? '' : String(vars[key]);
     }
     return '';
+  });
+}
+
+// Replace a file's extension with `.thumb.jpg`. e.g. "foo.PNG" -> "foo.thumb.jpg".
+function thumbName(imageBasename) {
+  return imageBasename.replace(/\.[^.]+$/, '') + THUMB_SUFFIX;
+}
+
+// ---------------- Image processing (incremental) ----------------
+
+function isStale(srcPath, destPath) {
+  if (!fs.existsSync(destPath)) return true;
+  return fs.statSync(srcPath).mtimeMs > fs.statSync(destPath).mtimeMs;
+}
+
+function walkFiles(root, cb) {
+  for (const entry of fs.readdirSync(root, { withFileTypes: true })) {
+    const p = path.join(root, entry.name);
+    if (entry.isDirectory()) walkFiles(p, cb);
+    else if (entry.isFile()) cb(p);
+  }
+}
+
+async function runWithConcurrency(items, limit, worker) {
+  let i = 0;
+  const runners = Array.from({ length: Math.min(limit, items.length) }, async () => {
+    while (i < items.length) {
+      const idx = i++;
+      await worker(items[idx], idx);
+    }
+  });
+  await Promise.all(runners);
+}
+
+async function generateThumb(srcPath, destPath) {
+  fs.mkdirSync(path.dirname(destPath), { recursive: true });
+  await sharp(srcPath)
+    .rotate()
+    .resize({ width: THUMB_WIDTH, withoutEnlargement: true })
+    .jpeg({ quality: THUMB_QUALITY, mozjpeg: true })
+    .toFile(destPath);
+}
+
+async function processImages() {
+  const srcImages = path.join(SRC, 'images');
+  const outImages = path.join(OUT, 'images');
+  if (!fs.existsSync(srcImages)) return;
+
+  // 1. Discover all source images and decide what needs to exist in output.
+  // expected: Set<absolute path under outImages> of files that should be present.
+  const expected = new Set();
+  // tasks: { type: 'copy'|'thumb', src, dest }
+  const tasks = [];
+
+  walkFiles(srcImages, (srcPath) => {
+    const rel = path.relative(srcImages, srcPath);
+    const fullDest = path.join(outImages, rel);
+    expected.add(fullDest);
+    if (isStale(srcPath, fullDest)) tasks.push({ type: 'copy', src: srcPath, dest: fullDest });
+
+    const topDir = rel.split(path.sep)[0];
+    const ext = path.extname(srcPath).toLowerCase();
+    if (THUMB_DIRS.has(topDir) && (ext === '.jpg' || ext === '.jpeg' || ext === '.png')) {
+      const thumbDest = path.join(path.dirname(fullDest), thumbName(path.basename(srcPath)));
+      expected.add(thumbDest);
+      if (isStale(srcPath, thumbDest)) tasks.push({ type: 'thumb', src: srcPath, dest: thumbDest });
+    }
+  });
+
+  // 2. Remove orphan files in output that no longer exist in source.
+  if (fs.existsSync(outImages)) {
+    walkFiles(outImages, (p) => {
+      if (!expected.has(p)) {
+        fs.rmSync(p, { force: true });
+      }
+    });
+  }
+
+  // 3. Run pending copies and thumb generations with bounded concurrency.
+  if (tasks.length === 0) {
+    console.log('[build] images up to date');
+    return;
+  }
+  const copies = tasks.filter((t) => t.type === 'copy');
+  const thumbs = tasks.filter((t) => t.type === 'thumb');
+  console.log(`[build] images: ${copies.length} to copy, ${thumbs.length} thumbnails to generate`);
+
+  const concurrency = Math.max(2, Math.min(8, os.cpus().length));
+  await runWithConcurrency(tasks, concurrency, async (t) => {
+    if (t.type === 'copy') {
+      copyFile(t.src, t.dest);
+    } else {
+      await generateThumb(t.src, t.dest);
+    }
   });
 }
 
@@ -155,10 +266,10 @@ function buildPhotography() {
   const grid = items
     .map((it) => {
       const tagAttr = (it.tags || []).join(' ');
-      const src = `/images/earth/${encodeURI(it.image)}`;
+      const thumbSrc = `/images/earth/${encodeURI(thumbName(it.image))}`;
       const alt = it.title || it.location || it.image;
       return `<button class="grid-item" type="button" data-image="${escAttr(it.image)}" data-tags="${escAttr(tagAttr)}" aria-label="${escAttr(alt)}">
-        <img src="${escAttr(src)}" alt="${escAttr(alt)}" loading="lazy" decoding="async" />
+        <img src="${escAttr(thumbSrc)}" alt="${escAttr(alt)}" loading="lazy" decoding="async" />
       </button>`;
     })
     .join('\n');
@@ -188,10 +299,10 @@ function buildAstro() {
 
   const grid = items
     .map((it) => {
-      const src = `/images/astro/${encodeURI(it.image)}`;
+      const thumbSrc = `/images/astro/${encodeURI(thumbName(it.image))}`;
       const alt = it.title || it.image;
       return `<button class="grid-item" type="button" data-image="${escAttr(it.image)}" aria-label="${escAttr(alt)}">
-        <img src="${escAttr(src)}" alt="${escAttr(alt)}" loading="lazy" decoding="async" />
+        <img src="${escAttr(thumbSrc)}" alt="${escAttr(alt)}" loading="lazy" decoding="async" />
       </button>`;
     })
     .join('\n');
@@ -249,10 +360,17 @@ const blogPosts = {
 
 // ---------------- Build ----------------
 
-function build() {
-  console.log('[build] cleaning', OUT);
-  fs.rmSync(OUT, { recursive: true, force: true });
+async function build() {
+  // Selectively clean: HTML pages and assets always get regenerated, but images
+  // are processed incrementally so we don't redo thumbnails every build.
+  console.log('[build] cleaning pages + assets in', OUT);
   fs.mkdirSync(OUT, { recursive: true });
+  for (const sub of ['photography', 'astro', 'videos', 'blog', 'assets']) {
+    rmIfExists(path.join(OUT, sub));
+  }
+  for (const file of ['index.html', '404.html', 'CNAME', 'favicon.ico']) {
+    rmIfExists(path.join(OUT, file));
+  }
 
   // Static pages.
   write('index.html', buildHome());
@@ -267,10 +385,9 @@ function build() {
     write(`blog/${slug}/index.html`, buildBlogPost(slug, meta));
   }
 
-  // Static assets.
+  // Static assets (CSS / JS / SVG).
   console.log('[build] copying assets');
   copyDir(path.join(SRC, 'assets'), path.join(OUT, 'assets'));
-  copyDir(path.join(SRC, 'images'), path.join(OUT, 'images'));
 
   // CNAME and favicon at root.
   const cname = path.join(__dirname, 'CNAME');
@@ -278,7 +395,13 @@ function build() {
   const icon = path.join(SRC, 'assets', 'icon.png');
   if (fs.existsSync(icon)) copyFile(icon, path.join(OUT, 'favicon.ico'));
 
+  // Images: incremental copy + thumbnail generation.
+  await processImages();
+
   console.log('[build] done ->', OUT);
 }
 
-build();
+build().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
