@@ -43,10 +43,8 @@ body.home { background: #0b0f14; }
   text-align: center;
   padding: 1.75rem 1rem;
   color: #fff;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: transparent;
+  border: 1px solid transparent;
   transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
 }
 .home-tile:hover,
@@ -55,6 +53,8 @@ body.home { background: #0b0f14; }
   color: #fff;
   background: rgba(255, 255, 255, 0.14);
   border-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   transform: translateY(-3px);
 }
 
