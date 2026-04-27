@@ -50,8 +50,8 @@
     modal.innerHTML =
       '<button type="button" class="modal-close" aria-label="Close">&times;</button>' +
       '<div class="modal-content">' +
-        '<div class="modal-details" data-modal-details></div>' +
         '<div class="modal-image"><a data-modal-link target="_blank" rel="noopener"><img data-modal-img alt="" /></a></div>' +
+        '<div class="modal-details" data-modal-details></div>' +
       '</div>';
     document.body.appendChild(modal);
     modalImg = modal.querySelector('[data-modal-img]');
